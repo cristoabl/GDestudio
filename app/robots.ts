@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://gdarq.com.ar/sitemap.xml', // Reemplazar con dominio real
+    sitemap: 'https://gdestudio.com.ar/sitemap.xml', // Reemplazar con dominio real
   };
 }

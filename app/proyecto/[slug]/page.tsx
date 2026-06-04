@@ -102,7 +102,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
                 
                 <div className="flex gap-4 border-t border-white/10 pt-8">
                   <Link 
-                    href="#contact" 
+                    href="/#contact" 
                     className="flex-1 text-center py-3 bg-white text-black font-medium hover:bg-gray-200 transition-colors uppercase tracking-widest text-xs"
                   >
                     Cotizar un proyecto similar

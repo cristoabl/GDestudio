@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <Link href="/" className="text-2xl font-heading font-bold tracking-tighter z-50 relative text-white">
-          GD<span className="text-gray-400 font-light">ARQ</span>
+          GD<span className="text-gray-400 font-light"> Estudio</span>
         </Link>
 
         {/* Desktop Nav */}

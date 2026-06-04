@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   portfolio:
@@ -6,7 +6,6 @@ services:
     container_name: gdestudio-portfolio
     restart: always
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3002:3000"
     environment:
       - NODE_ENV=production
-      - PORT=3000

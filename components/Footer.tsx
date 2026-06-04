@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="text-2xl font-heading font-bold tracking-tighter text-white inline-block mb-4">
-              GD<span className="text-gray-400 font-light">ARQ</span>
+              GD<span className="text-gray-400 font-light"> Estudio</span>
             </Link>
             <p className="text-gray-400 max-w-sm text-balance">
               Diseño arquitectónico especializado en espacios comerciales, retail y experiencias de marca que conectan y convierten.
@@ -29,13 +29,13 @@ export default function Footer() {
             <h3 className="text-white font-medium mb-4">Contacto</h3>
             <ul className="space-y-3 flex flex-col">
               <li>
-                <a href="mailto:gabriela.dodelson@gmail.com" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  gabriela.dodelson@gmail.com
+                <a href="mailto:contacto@gdestudio.com.ar" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  contacto@gdestudio.com.ar
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/5493518642423" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  +54 9 351 864-2423
+                <a href="https://wa.me/5493512139252" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  +54 9 351 213-9252
                 </a>
               </li>
               <li className="text-gray-400 text-sm mt-2">

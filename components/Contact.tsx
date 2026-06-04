@@ -60,7 +60,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <a
-                  href="mailto:gabriela.dodelson@gmail.com"
+                  href="mailto:contacto@gdestudio.com.ar"
                   className="group flex items-center gap-4 p-4 border border-white/10 hover:border-white/30 bg-white/5 transition-all"
                 >
                   <div className="w-12 h-12 bg-white/10 flex items-center justify-center rounded-none group-hover:bg-white group-hover:text-black transition-colors">
@@ -68,12 +68,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <span className="block text-xs uppercase tracking-widest text-gray-500 mb-1">Email</span>
-                    <span className="text-white font-medium group-hover:text-gray-300 transition-colors">gabriela.dodelson@gmail.com</span>
+                    <span className="text-white font-medium group-hover:text-gray-300 transition-colors">contacto@gdestudio.com.ar</span>
                   </div>
                 </a>
 
                 <a
-                  href="https://wa.me/5493518642423"
+                  href="https://wa.me/5493512139252"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 p-4 border border-white/10 hover:border-white/30 bg-white/5 transition-all"
@@ -83,7 +83,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <span className="block text-xs uppercase tracking-widest text-gray-500 mb-1">WhatsApp Directo</span>
-                    <span className="text-white font-medium">+54 9 351 864-2423</span>
+                    <span className="text-white font-medium">+54 9 351 213-9252</span>
                   </div>
                 </a>
               </div>

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { projects } from '@/data/projects';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://gdarq.com.ar'; // Reemplazar despues con el dominio real
+  const baseUrl = 'https://gdestudio.com.ar'; // Reemplazar despues con el dominio real
 
   const projectUrls = projects.map((project) => ({
     url: `${baseUrl}/proyecto/${project.slug}`,
