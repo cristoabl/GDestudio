@@ -55,12 +55,12 @@ export default function Services() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-sm font-medium text-gray-400 tracking-widest uppercase mb-3">Expertise</h2>
+            <h2 className="text-sm font-medium text-gray-400 tracking-widest uppercase mb-3">Especialidad</h2>
             <h3 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight mb-6">
-              Servicios Profesionales
+              Arquitectura & Diseño Comercial
             </h3>
-            <p className="text-gray-400 text-lg text-balance">
-              Soluciones integrales de arquitectura enfocadas en resultados comerciales reales.
+            <p className="text-gray-400 text-lg text-balance font-light">
+              Soluciones integrales de diseño y remodelación de locales comerciales enfocadas en resultados reales de negocio.
             </p>
           </motion.div>
         </div>

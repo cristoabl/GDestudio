@@ -17,10 +17,9 @@ export default function About() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] w-full max-w-md mx-auto lg:max-w-none grayscale hover:grayscale-0 transition-all duration-700"
           >
-            {/* Si tenes una foto real de la arquitecta, podes cambiar aca. Por ahora uso render de Bacar */}
             <Image
               src="/projects/bacar/03-Taller Bacar Interior.png"
-              alt="Gabriela Dodelson - Retrato"
+              alt="Gabriela Dodelson - Especialista en Arquitectura Comercial y Diseño de Locales"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -37,17 +36,17 @@ export default function About() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="flex flex-col justify-center"
           >
-            <h2 className="text-sm font-medium text-gray-400 tracking-widest uppercase mb-3">La Arquitecta</h2>
+            <h2 className="text-sm font-medium text-gray-400 tracking-widest uppercase mb-3">Estudio de Arquitectura Comercial</h2>
             <h3 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight mb-8">
               Gabriela Dodelson
             </h3>
             
             <div className="space-y-6 text-gray-400 font-light text-lg leading-relaxed mb-10 text-balance">
               <p>
-                Graduada de la FAUD-UNC (2015), he consolidado mi carrera en el exigente mundo de la arquitectura comercial argentina.
+                Graduada de la FAUD-UNC (2015), he consolidado mi trayectoria especializándome en el diseño y la arquitectura comercial en Córdoba.
               </p>
               <p>
-                Desde 2018, transformo visiones de marca en legajos técnicos rigurosos y realidades tangibles. Mi enfoque combina la precisión técnica con el entendimiento profundo de los objetivos comerciales y de branding de cada cliente.
+                Desde 2018, transformo visiones de marca en legajos técnicos rigurosos y realidades tangibles. Mi enfoque combina la precisión técnica con el entendimiento profundo de los objetivos comerciales, el branding y el comportamiento del consumidor de cada cliente.
               </p>
               <p>
                 Mi fuerte es la comunicación visual del proyecto: domino herramientas de vanguardia como Lumion, SketchUp + V-Ray y Revit. Esto me permite ofrecer una experiencia inmersiva y extremadamente precisa desde la primera idea conceptual hasta el último plano de obra.

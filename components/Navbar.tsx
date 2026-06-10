@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Portfolio", href: "#portfolio" },
   { name: "Servicios", href: "#services" },
   { name: "Sobre Mí", href: "#about" },
+  { name: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {

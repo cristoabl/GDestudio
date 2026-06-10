@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/projects/alma-paz/Img_01_Alma Paz.png"
-          alt="Gabriela Dodelson - Arquitectura Comercial"
+          alt="GD Estudio - Arquitectura Comercial y Diseño de Locales Comerciales"
           fill
           priority
           className="object-cover"
@@ -27,14 +27,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl"
+          className="max-w-5xl"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-heading">
-            Diseño arquitectónico que <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">impulsa</span> tu marca
+          <h1 className="text-4xl md:text-6xl lg:text-7.5xl font-bold text-white mb-6 leading-tight font-heading text-balance">
+            Arquitectura Comercial & <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">Diseño de Locales</span> Comerciales
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light text-balance">
-            Especialistas en locales comerciales, retail, remodelaciones y diseño interior. Transformamos espacios en experiencias comerciales memorables.
+          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light text-balance">
+            Especialistas en diseño comercial, retail y remodelación de locales comerciales en Córdoba, Argentina. Transformamos espacios físicos en experiencias memorables de marca.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
