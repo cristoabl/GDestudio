@@ -106,12 +106,39 @@ export default function Hero() {
               Contactar
             </Link>
           </div>
+
+          {/* Indicadores de credibilidad */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            className="mt-10 flex flex-col items-center gap-5"
+          >
+            <div className="flex items-center justify-center divide-x divide-white/20">
+              <div className="px-6 text-center">
+                <span className="block text-2xl md:text-3xl font-heading font-bold text-white">+10</span>
+                <span className="text-xs text-gray-400 uppercase tracking-widest">Años de experiencia</span>
+              </div>
+              <div className="px-6 text-center">
+                <span className="block text-2xl md:text-3xl font-heading font-bold text-white">+50</span>
+                <span className="text-xs text-gray-400 uppercase tracking-widest">Proyectos comerciales</span>
+              </div>
+              <div className="px-6 text-center">
+                <span className="block text-2xl md:text-3xl font-heading font-bold text-white">100%</span>
+                <span className="text-xs text-gray-400 uppercase tracking-widest">Llave en mano</span>
+              </div>
+            </div>
+            <p className="text-[11px] md:text-sm text-gray-400 font-light tracking-wide px-4 text-balance leading-relaxed">
+              Marcas que confiaron:{" "}
+              <span className="text-gray-200">La Dolfina · Arka · Zhoue · Peusso · Crocco</span>
+            </p>
+          </motion.div>
         </motion.div>
       </div>
 
       {/* Indicadores del carrusel */}
       {!reduceMotion && (
-        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 hidden sm:flex gap-2">
           {heroImages.map((_, i) => (
             <button
               key={i}
@@ -130,7 +157,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden sm:block"
       >
         <Link href="#portfolio" aria-label="Scroll down">
           <motion.div
