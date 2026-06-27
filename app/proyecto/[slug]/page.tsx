@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { Metadata } from "next";
 
-// Define params type explicitly for Next.js 15
+// Define params type explicitly (async params en Next.js 16)
 type Params = Promise<{ slug: string }>;
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   }
 
   return {
-    title: `${project.name} | Gabriela Dodelson`,
+    title: `${project.name} | GD Estudio`,
     description: project.description,
   };
 }

@@ -1,23 +1,78 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
+// Mejores renders, uno por proyecto, para mostrar variedad en los primeros segundos.
+const heroImages = [
+  { src: "/projects/alma-paz/Img_01_Alma Paz.webp", alt: "Alma Paz — local comercial en Urca, Córdoba" },
+  { src: "/projects/bacar/04-Taller Bacar Interior.webp", alt: "Taller Bacar — diseño industrial contemporáneo" },
+  { src: "/projects/la-dolfina/01-La Dolfina.Cba Shopping.webp", alt: "La Dolfina — retail de alta gama en Córdoba Shopping" },
+  { src: "/projects/peusso/PEUSSO_04.webp", alt: "Peusso — showroom de iluminación y tecnología" },
+  { src: "/projects/crocco/01_Crocco_Valle.webp", alt: "Crocco — espacio comercial en Valle Escondido" },
+  { src: "/projects/zhoue/1_Zhoue.webp", alt: "Zhoue — local de indumentaria en Nuevocentro Shopping" },
+  { src: "/projects/arka/ARKA_Nuevocentro_04.webp", alt: "Arka — remodelación de local en Nuevocentro Shopping" },
+  { src: "/projects/rustico-urca/render-1.webp", alt: "Rústico — espacio gastronómico en Urca" },
+];
+
+const SLIDE_DURATION = 5000; // ms por imagen
+
 export default function Hero() {
+  const reduceMotion = useReducedMotion();
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (reduceMotion) return;
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % heroImages.length);
+    }, SLIDE_DURATION);
+    return () => clearInterval(timer);
+  }, [reduceMotion]);
+
   return (
     <section id="hero" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Background Image - Using Alma Paz as best render */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/projects/alma-paz/Img_01_Alma Paz.png"
-          alt="GD Estudio - Arquitectura Comercial y Diseño de Locales Comerciales"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        {/* Dark overlay for contrast */}
+      {/* Carrusel de fondo */}
+      <div className="absolute inset-0 z-0 bg-black">
+        {reduceMotion ? (
+          <Image
+            src={heroImages[0].src}
+            alt={heroImages[0].alt}
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+        ) : (
+          <AnimatePresence>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ opacity: { duration: 1.5, ease: "easeInOut" } }}
+              className="absolute inset-0"
+            >
+              <motion.div
+                initial={{ scale: 1 }}
+                animate={{ scale: 1.12 }}
+                transition={{ duration: (SLIDE_DURATION / 1000) + 1.5, ease: "linear" }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={heroImages[index].src}
+                  alt={heroImages[index].alt}
+                  fill
+                  priority={index === 0}
+                  className="object-cover"
+                  sizes="100vw"
+                />
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+        )}
+        {/* Overlay oscuro para contraste */}
         <div className="absolute inset-0 bg-black/60 z-10"></div>
       </div>
 
@@ -32,19 +87,19 @@ export default function Hero() {
           <h1 className="text-4xl md:text-6xl lg:text-7.5xl font-bold text-white mb-6 leading-tight font-heading text-balance">
             Arquitectura Comercial & <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">Diseño de Locales</span> Comerciales
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light text-balance">
             Especialistas en diseño comercial, retail y remodelación de locales comerciales en Córdoba, Argentina. Transformamos espacios físicos en experiencias memorables de marca.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
+            <Link
               href="#portfolio"
               className="px-8 py-4 bg-white text-black font-medium text-lg hover:bg-gray-200 transition-colors w-full sm:w-auto"
             >
               Ver Proyectos
             </Link>
-            <Link 
+            <Link
               href="#contact"
               className="px-8 py-4 bg-transparent border border-white/30 text-white font-medium text-lg hover:bg-white/10 hover:border-white transition-all w-full sm:w-auto"
             >
@@ -54,8 +109,24 @@ export default function Hero() {
         </motion.div>
       </div>
 
+      {/* Indicadores del carrusel */}
+      {!reduceMotion && (
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+          {heroImages.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              aria-label={`Ver render ${i + 1}`}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                i === index ? "w-8 bg-white" : "w-1.5 bg-white/40 hover:bg-white/70"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+
       {/* Scroll indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}

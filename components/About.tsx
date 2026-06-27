@@ -18,7 +18,7 @@ export default function About() {
             className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] w-full max-w-md mx-auto lg:max-w-none grayscale hover:grayscale-0 transition-all duration-700"
           >
             <Image
-              src="/projects/bacar/03-Taller Bacar Interior.png"
+              src="/projects/bacar/03-Taller Bacar Interior.webp"
               alt="Gabriela Dodelson - Especialista en Arquitectura Comercial y Diseño de Locales"
               fill
               className="object-cover"
