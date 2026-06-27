@@ -32,7 +32,7 @@ export default function Hero() {
   }, [reduceMotion]);
 
   return (
-    <section id="hero" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen md:h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Carrusel de fondo */}
       <div className="absolute inset-0 z-0 bg-black">
         {reduceMotion ? (
@@ -77,7 +77,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 md:px-12 relative z-20 flex flex-col items-center text-center mt-20">
+      <div className="container mx-auto px-6 md:px-12 relative z-20 flex flex-col items-center text-center mt-28 mb-16 md:my-0 md:mt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -130,7 +130,7 @@ export default function Hero() {
             </div>
             <p className="text-[11px] md:text-sm text-gray-400 font-light tracking-wide px-4 text-balance leading-relaxed">
               Marcas que confiaron:{" "}
-              <span className="text-gray-200">La Dolfina · Arka · Zhoue · Peusso · Crocco</span>
+              <span className="text-gray-200">Rústico · La Dolfina · Arka · Zhoue · Peusso · Crocco</span>
             </p>
           </motion.div>
         </motion.div>
