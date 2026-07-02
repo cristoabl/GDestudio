@@ -6,11 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navLinks = [
-  { name: "Inicio", href: "#hero" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Servicios", href: "#services" },
-  { name: "Sobre Mí", href: "#about" },
-  { name: "FAQ", href: "#faq" },
+  { name: "Inicio", href: "/#hero" },
+  { name: "Portfolio", href: "/#portfolio" },
+  { name: "Servicios", href: "/#services" },
+  { name: "Sobre Mí", href: "/#about" },
+  { name: "FAQ", href: "/#faq" },
 ];
 
 export default function Navbar() {
@@ -48,7 +48,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="/#contact"
             className="ml-4 px-5 py-2.5 text-sm font-medium bg-white text-black hover:bg-gray-200 transition-colors rounded-none"
           >
             Hablemos
@@ -90,7 +90,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setMobileMenuOpen(false)}
               className="mt-4 px-8 py-3 text-lg font-medium bg-white text-black hover:bg-gray-200 transition-colors rounded-none"
             >

@@ -78,7 +78,7 @@ export default function Services() {
               variants={itemVariants}
               className="p-8 lg:p-12 bg-white/5 border border-white/5 hover:bg-white/10 transition-colors duration-300 group"
             >
-              <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-white/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                 <service.icon className="w-7 h-7 text-white" />
               </div>
               <h4 className="text-2xl font-heading font-bold text-white mb-4">

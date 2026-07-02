@@ -13,21 +13,21 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "GD Estudio | Arquitectura Comercial y Diseño de Locales Comerciales en Córdoba",
+  title: "GD Estudio | Arquitectura Comercial en Córdoba",
   description:
     "Estudio de arquitectura comercial y diseño de locales comerciales en Córdoba. Especialistas en diseño de locales, retail, stands y remodelaciones comerciales en Argentina.",
   metadataBase: new URL("https://gdestudio.com.ar"),
   openGraph: {
-    title: "GD Estudio | Arquitectura Comercial y Diseño de Locales Comerciales en Córdoba",
+    title: "GD Estudio | Arquitectura Comercial en Córdoba",
     description:
       "Transformamos espacios en experiencias comerciales exitosas. Arquitectura comercial, diseño de locales, retail y visualización 3D en Córdoba.",
     url: "https://gdestudio.com.ar",
     siteName: "GD Estudio",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1024,
-        height: 1024,
+        url: "/og-image-1200x630.jpg",
+        width: 1200,
+        height: 630,
         alt: "GD Estudio — Arquitectura Comercial & Diseño de Locales Comerciales",
       },
     ],
@@ -36,10 +36,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GD Estudio | Arquitectura Comercial y Diseño de Locales Comerciales en Córdoba",
+    title: "GD Estudio | Arquitectura Comercial en Córdoba",
     description:
       "Transformamos espacios en experiencias comerciales exitosas. Arquitectura comercial, diseño de locales, retail y visualización 3D en Córdoba.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image-1200x630.jpg"],
   },
   icons: {
     icon: "/icon.png",
@@ -83,7 +83,7 @@ const architecturalOfficeSchema = {
     "closes": "18:00"
   },
   "sameAs": [
-    "https://www.instagram.com/gdarq.estudio"
+    "https://www.instagram.com/gdestudio.arq"
   ],
   "knowsAbout": [
     "Arquitectura Comercial",

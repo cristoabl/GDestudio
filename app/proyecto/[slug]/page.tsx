@@ -4,6 +4,8 @@ import Link from "next/link";
 import { projects } from "@/data/projects";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProjectGallery from "@/components/ProjectGallery";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { Metadata } from "next";
 
@@ -67,7 +69,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
             Volver al Portfolio
           </Link>
           <div className="max-w-3xl">
-            <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs uppercase tracking-widest text-white mb-4">
+            <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md text-xs uppercase tracking-widest text-white mb-4">
               {project.category}
             </span>
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white tracking-tight mb-4">
@@ -99,7 +101,35 @@ export default async function ProjectPage({ params }: { params: Params }) {
                 <p className="text-xl text-gray-300 font-light leading-relaxed mb-8">
                   {project.description}
                 </p>
-                
+
+                {/* Ficha técnica */}
+                <dl className="border-t border-white/10 divide-y divide-white/10 mb-8">
+                  <div className="flex justify-between gap-4 py-4">
+                    <dt className="text-xs uppercase tracking-widest text-gray-500">Ubicación</dt>
+                    <dd className="text-sm text-white text-right">{project.location}</dd>
+                  </div>
+                  <div className="flex justify-between gap-4 py-4">
+                    <dt className="text-xs uppercase tracking-widest text-gray-500">Año</dt>
+                    <dd className="text-sm text-white text-right">{project.year}</dd>
+                  </div>
+                  <div className="flex justify-between gap-4 py-4">
+                    <dt className="text-xs uppercase tracking-widest text-gray-500">Categoría</dt>
+                    <dd className="text-sm text-white text-right">{project.category}</dd>
+                  </div>
+                  {project.area && (
+                    <div className="flex justify-between gap-4 py-4">
+                      <dt className="text-xs uppercase tracking-widest text-gray-500">Superficie</dt>
+                      <dd className="text-sm text-white text-right">{project.area}</dd>
+                    </div>
+                  )}
+                  {project.services && (
+                    <div className="flex justify-between gap-4 py-4">
+                      <dt className="text-xs uppercase tracking-widest text-gray-500">Servicios</dt>
+                      <dd className="text-sm text-white text-right">{project.services.join(" · ")}</dd>
+                    </div>
+                  )}
+                </dl>
+
                 <div className="flex gap-4 border-t border-white/10 pt-8">
                   <Link 
                     href="/#contact" 
@@ -112,18 +142,8 @@ export default async function ProjectPage({ params }: { params: Params }) {
             </div>
 
             {/* Image Gallery - Col 8 */}
-            <div className="md:col-span-8 space-y-8 md:space-y-12">
-              {project.images.map((img, idx) => (
-                <div key={idx} className="relative w-full aspect-[4/3] md:aspect-auto md:min-h-[60vh] bg-white/5">
-                  <Image
-                    src={img}
-                    alt={`${project.name} - Imagen ${idx + 1}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 66vw"
-                  />
-                </div>
-              ))}
+            <div className="md:col-span-8">
+              <ProjectGallery images={project.images} projectName={project.name} />
             </div>
           </div>
         </div>
@@ -148,6 +168,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }

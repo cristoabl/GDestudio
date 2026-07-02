@@ -12,9 +12,8 @@ export default function Contact() {
     e.preventDefault();
     setStatus("loading");
 
-    const formData = new FormData(e.currentTarget);
-
-    // REEMPLAZAR ESTA CLAVE POR LA QUE TE ENVIEN DE WEB3FORMS:
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     formData.append("access_key", "439383c6-3887-4cbd-9a5c-991267dae2b9");
 
     try {
@@ -26,7 +25,7 @@ export default function Contact() {
       const data = await response.json();
       if (data.success) {
         setStatus("success");
-        e.currentTarget.reset();
+        form.reset();
       } else {
         setStatus("error");
         setErrorMessage(data.message || "Hubo un error al enviar tu mensaje.");
@@ -99,7 +98,7 @@ export default function Contact() {
             >
               {status === "success" ? (
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm z-10 p-8 text-center border border-white/20">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
                     <svg className="w-8 h-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>

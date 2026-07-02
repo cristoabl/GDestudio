@@ -84,7 +84,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-5xl"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7.5xl font-bold text-white mb-6 leading-tight font-heading text-balance">
+          <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-bold text-white mb-6 leading-tight font-heading text-balance">
             Arquitectura Comercial & <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">Diseño de Locales</span> Comerciales
           </h1>
 

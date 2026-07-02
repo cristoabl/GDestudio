@@ -1,4 +1,15 @@
 import Link from "next/link";
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,9 +30,9 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-medium mb-4">Navegación</h3>
             <ul className="space-y-3 flex flex-col">
-              <li><Link href="#portfolio" className="text-gray-400 hover:text-white transition-colors text-sm">Portfolio</Link></li>
-              <li><Link href="#services" className="text-gray-400 hover:text-white transition-colors text-sm">Servicios</Link></li>
-              <li><Link href="#about" className="text-gray-400 hover:text-white transition-colors text-sm">Sobre Mí</Link></li>
+              <li><Link href="/#portfolio" className="text-gray-400 hover:text-white transition-colors text-sm">Portfolio</Link></li>
+              <li><Link href="/#services" className="text-gray-400 hover:text-white transition-colors text-sm">Servicios</Link></li>
+              <li><Link href="/#about" className="text-gray-400 hover:text-white transition-colors text-sm">Sobre Mí</Link></li>
             </ul>
           </div>
 
@@ -29,16 +40,25 @@ export default function Footer() {
             <h3 className="text-white font-medium mb-4">Contacto</h3>
             <ul className="space-y-3 flex flex-col">
               <li>
-                <a href="mailto:contacto@gdestudio.com.ar" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <a href="mailto:contacto@gdestudio.com.ar" className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-colors text-sm">
+                  <EnvelopeIcon className="w-4 h-4 shrink-0" />
                   contacto@gdestudio.com.ar
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/5493512139252" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <a href="https://wa.me/5493512139252" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-colors text-sm">
+                  <PhoneIcon className="w-4 h-4 shrink-0" />
                   +54 9 351 213-9252
                 </a>
               </li>
-              <li className="text-gray-400 text-sm mt-2">
+              <li>
+                <a href="https://www.instagram.com/gdestudio.arq" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-colors text-sm">
+                  <InstagramIcon className="w-4 h-4 shrink-0" />
+                  @gdestudio.arq
+                </a>
+              </li>
+              <li className="flex items-center gap-2.5 text-gray-400 text-sm mt-2">
+                <MapPinIcon className="w-4 h-4 shrink-0" />
                 Córdoba, Argentina
               </li>
             </ul>

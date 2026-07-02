@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { DARK_BLUR } from "@/lib/blur";
 
 export default function About() {
   return (
@@ -21,6 +22,8 @@ export default function About() {
               src="/projects/bacar/03-Taller Bacar Interior.webp"
               alt="Gabriela Dodelson - Especialista en Arquitectura Comercial y Diseño de Locales"
               fill
+              placeholder="blur"
+              blurDataURL={DARK_BLUR}
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />

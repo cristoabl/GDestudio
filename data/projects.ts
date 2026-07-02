@@ -7,6 +7,10 @@ export type Project = {
   coverImage: string;
   images: string[];
   year: string;
+  /** Superficie del proyecto, ej: "120 m²". Opcional: completar cuando se tenga el dato. */
+  area?: string;
+  /** Servicios prestados en el proyecto. */
+  services?: string[];
 };
 
 export const projects: Project[] = [
@@ -25,7 +29,8 @@ export const projects: Project[] = [
       "/projects/alma-paz/Img_06_Alma Paz.webp",
       "/projects/alma-paz/Img_07_Alma Paz.webp"
     ],
-    year: "2024"
+    year: "2024",
+    services: ["Diseño integral", "Visualización 3D"]
   },
   {
     slug: "arka",
@@ -41,7 +46,8 @@ export const projects: Project[] = [
       "/projects/arka/ARKA_Nuevocentro_03.webp",
       "/projects/arka/ARKA_Nuevocentro_04.webp"
     ],
-    year: "2023"
+    year: "2023",
+    services: ["Remodelación", "Diseño de exhibición"]
   },
   {
     slug: "bacar",
@@ -58,7 +64,8 @@ export const projects: Project[] = [
       "/projects/bacar/05-Taller Bacar Interior.webp",
       "/projects/bacar/06-Taller Bacar Interior.webp"
     ],
-    year: "2024"
+    year: "2024",
+    services: ["Diseño integral", "Visualización 3D"]
   },
   {
     slug: "crocco",
@@ -76,7 +83,8 @@ export const projects: Project[] = [
       "/projects/crocco/06_Crocco_Valle.webp",
       "/projects/crocco/07_Crocco_Valle.webp"
     ],
-    year: "2023"
+    year: "2023",
+    services: ["Diseño comercial", "Visualización 3D"]
   },
   {
     slug: "la-dolfina",
@@ -95,7 +103,8 @@ export const projects: Project[] = [
       "/projects/la-dolfina/03- Meson int.webp",
       "/projects/la-dolfina/04- Meson int.webp"
     ],
-    year: "2023"
+    year: "2023",
+    services: ["Diseño retail", "Mobiliario a medida"]
   },
   {
     slug: "peusso",
@@ -113,7 +122,8 @@ export const projects: Project[] = [
       "/projects/peusso/PEUSSO_06.webp",
       "/projects/peusso/PEUSSO_07.webp"
     ],
-    year: "2024"
+    year: "2024",
+    services: ["Diseño de showroom", "Iluminación estratégica"]
   },
   {
     slug: "zhoue",
@@ -131,7 +141,8 @@ export const projects: Project[] = [
       "/projects/zhoue/5_Zhoue.webp",
       "/projects/zhoue/6_Zhoue.webp"
     ],
-    year: "2023"
+    year: "2023",
+    services: ["Diseño retail", "Fachada e iluminación"]
   },
   {
     slug: "rustico-urca",
@@ -154,6 +165,7 @@ export const projects: Project[] = [
       "/projects/rustico-urca/blueprint-5.webp",
       "/projects/rustico-urca/blueprint-6.webp"
     ],
-    year: "2024"
+    year: "2024",
+    services: ["Legajo técnico ejecutivo", "Visualización 3D"]
   }
 ];

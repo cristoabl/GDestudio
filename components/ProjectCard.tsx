@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Project } from "@/data/projects";
+import { DARK_BLUR } from "@/lib/blur";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 interface ProjectCardProps {
@@ -35,8 +36,9 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           src={project.coverImage}
           alt={`Proyecto ${project.name}`}
           fill
-          quality={100}
-          sizes="100vw"
+          placeholder="blur"
+          blurDataURL={DARK_BLUR}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
         />
         
@@ -47,7 +49,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               <h3 className="text-2xl md:text-3xl font-heading font-bold text-white tracking-tight">
                 {project.name}
               </h3>
-              <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center transform md:scale-90 group-hover:scale-110 origin-center transition-all duration-300">
+              <div className="w-10 h-10 bg-white text-black flex items-center justify-center transform md:scale-90 group-hover:scale-110 origin-center transition-all duration-300">
                 <ArrowUpRightIcon className="w-5 h-5" />
               </div>
             </div>
