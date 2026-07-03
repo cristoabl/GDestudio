@@ -1,0 +1,21 @@
+GD ESTUDIO — ASSETS DE MARCA
+=============================
+
+FOTO DE PERFIL (foto_perfil/)
+- perfil_GD.jpg ............ Recomendada. Monograma "GD" — se lee nítido en el círculo chico de Instagram/WhatsApp.
+- perfil_GD_estudio.jpg .... Alternativa con "ESTUDIO" debajo (se ve un poco más chica).
+Subila igual en Instagram, Facebook, WhatsApp Business y Google. Misma imagen en todas = marca coherente.
+
+PORTADAS DE REEL (portadas_reel/) — 1080x1920, reutilizables
+Usá la portada que corresponda según el tipo de reel:
+- 1_antes_despues .... reels de transformación (antes/después de un proyecto)
+- 2_en_obra .......... reels de obra / construcción
+- 3_tip .............. reels educativos / consejos
+- 4_proyecto ......... presentación de un proyecto nuevo (cambiá "(nombre del local)")
+- 5_detras ........... decisiones de diseño / detrás de escena
+
+CÓMO USARLAS:
+Al subir un reel, en el paso de portada elegí "de la galería" y seleccioná la que va.
+Tip: usar siempre la misma portada por tipo de contenido hace que tu grilla se vea ordenada y profesional.
+
+Todo en la tipografía y colores de la marca (negro / blanco, Poppins ≈ tu web).

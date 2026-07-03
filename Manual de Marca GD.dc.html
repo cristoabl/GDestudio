@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #F2EDE4; }
+    image-slot { display: block; width: 100%; height: 100%; }
+  </style>
+</helmet>
+
+<div style="font-family: 'Jost', sans-serif; max-width: 1100px; margin: 0 auto; padding: 64px 48px; display: flex; flex-direction: column; gap: 72px; color: #4A3F30;">
+
+  <!-- Portada -->
+  <div data-screen-label="Portada" style="background: #2E2620; padding: 90px 60px; display: flex; flex-direction: column; align-items: center; gap: 22px;">
+    <span style="font-weight: 500; font-size: 96px; line-height: 1; letter-spacing: 1px; color: #EDE5DA;">GD</span>
+    <span style="font-size: 16px; font-weight: 400; letter-spacing: 13px; color: #C8B99F; margin-left: 13px;">ESTUDIO</span>
+    <div style="width: 44px; height: 1px; background: #6B5A43; margin: 12px 0;"></div>
+    <span style="font-size: 14px; font-weight: 300; letter-spacing: 6px; color: #A0917A;">MANUAL DE MARCA · 2026</span>
+  </div>
+
+  <!-- 01 Logo -->
+  <div data-screen-label="Logo" style="display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; border-bottom: 1px solid #DDD2C2; padding-bottom: 14px;">
+      <span style="font-size: 13px; letter-spacing: 3px; color: #8A7355;">01</span>
+      <span style="font-size: 24px; font-weight: 400; letter-spacing: 4px;">LOGO</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div style="background: #EDE5DA; border: 1px solid #DDD2C2; height: 340px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">
+        <span style="font-weight: 500; font-size: 84px; line-height: 1; letter-spacing: 1px; color: #4A3F30;">GD</span>
+        <span style="font-size: 13px; font-weight: 400; letter-spacing: 10px; color: #8A7355; margin-left: 10px;">ESTUDIO</span>
+        <span style="font-size: 10px; font-weight: 300; letter-spacing: 5px; color: #8A7355; margin-left: 5px;">ARQUITECTURA &amp; DISEÑO</span>
+      </div>
+      <div style="background: #2E2620; border: 1px solid #DDD2C2; height: 340px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">
+        <span style="font-weight: 500; font-size: 84px; line-height: 1; letter-spacing: 1px; color: #EDE5DA;">GD</span>
+        <span style="font-size: 13px; font-weight: 400; letter-spacing: 10px; color: #C8B99F; margin-left: 10px;">ESTUDIO</span>
+        <span style="font-size: 10px; font-weight: 300; letter-spacing: 5px; color: #A0917A; margin-left: 5px;">ARQUITECTURA &amp; DISEÑO</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;">
+      <div style="background: #EDE5DA; border: 1px solid #DDD2C2; padding: 28px; display: flex; flex-direction: column; gap: 18px; align-items: center;">
+        <div style="border: 1px dashed #C8B99F; padding: 34px 44px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+          <span style="font-weight: 500; font-size: 44px; line-height: 1; color: #4A3F30;">GD</span>
+          <span style="font-size: 8px; font-weight: 400; letter-spacing: 5px; color: #8A7355; margin-left: 5px;">ESTUDIO</span>
+        </div>
+        <span style="font-size: 12px; font-weight: 300; letter-spacing: 2px; color: #7A6B54; text-align: center;">ÁREA DE RESPETO<br>Margen mínimo: la altura de la letra G a cada lado</span>
+      </div>
+      <div style="background: #EDE5DA; border: 1px solid #DDD2C2; padding: 28px; display: flex; flex-direction: column; gap: 18px; align-items: center; justify-content: center;">
+        <span style="font-weight: 500; font-size: 34px; line-height: 1; color: #4A3F30;">GD</span>
+        <span style="font-weight: 500; font-size: 18px; line-height: 1; color: #4A3F30;">GD</span>
+        <span style="font-size: 12px; font-weight: 300; letter-spacing: 2px; color: #7A6B54; text-align: center;">VERSIÓN REDUCIDA<br>Solo «GD» por debajo de 60 px de ancho (avatar, favicon)</span>
+      </div>
+      <div style="background: #EDE5DA; border: 1px solid #DDD2C2; padding: 28px; display: flex; flex-direction: column; gap: 14px; justify-content: center;">
+        <span style="font-size: 12px; font-weight: 400; letter-spacing: 3px; color: #8A7355;">NO HACER</span>
+        <span style="font-size: 13px; font-weight: 300; color: #7A6B54;">— No estirar ni condensar las letras</span>
+        <span style="font-size: 13px; font-weight: 300; color: #7A6B54;">— No usar colores fuera de la paleta</span>
+        <span style="font-size: 13px; font-weight: 300; color: #7A6B54;">— No aplicar sombras, contornos ni degradados</span>
+        <span style="font-size: 13px; font-weight: 300; color: #7A6B54;">— No colocar sobre fotos sin velo de color</span>
+        <span style="font-size: 13px; font-weight: 300; color: #7A6B54;">— No cambiar la tipografía del logotipo</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 Paleta -->
+  <div data-screen-label="Paleta" style="display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; border-bottom: 1px solid #DDD2C2; padding-bottom: 14px;">
+      <span style="font-size: 13px; letter-spacing: 3px; color: #8A7355;">02</span>
+      <span style="font-size: 24px; font-weight: 400; letter-spacing: 4px;">PALETA</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="height: 150px; background: #2E2620;"></div>
+        <span style="font-size: 13px; font-weight: 400; letter-spacing: 2px;">NOCHE</span>
+        <span style="font-size: 12px; font-weight: 300; color: #7A6B54;">#2E2620 · fondos oscuros, footer</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="height: 150px; background: #4A3F30;"></div>
+        <span style="font-size: 13px; font-weight: 400; letter-spacing: 2px;">TIERRA</span>
+        <span style="font-size: 12px; font-weight: 300; color: #7A6B54;">#4A3F30 · logo y titulares en claro</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="height: 150px; background: #8A7355;"></div>
+        <span style="font-size: 13px; font-weight: 400; letter-spacing: 2px;">BRONCE</span>
+        <span style="font-size: 12px; font-weight: 300; color: #7A6B54;">#8A7355 · acentos, subtítulos, enlaces</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="height: 150px; background: #C8B99F;"></div>
+        <span style="font-size: 13px; font-weight: 400; letter-spacing: 2px;">ARENA</span>
+        <span style="font-size: 12px; font-weight: 300; color: #7A6B54;">#C8B99F · detalles sobre fondo oscuro</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="height: 150px; background: #EDE5DA; border: 1px solid #DDD2C2;"></div>
+        <span style="font-size: 13px; font-weight: 400; letter-spacing: 2px;">CRUDO</span>
+        <span style="font-size: 12px; font-weight: 300; color: #7A6B54;">#EDE5DA · fondo principal de la marca</span>
+      </div>
+    </div>
+    <div style="font-size: 14px; font-weight: 300; color: #7A6B54; max-width: 720px;">Regla de proporción: Crudo domina (≈70%), Tierra y Noche estructuran (≈25%), Bronce acentúa (≈5%). Nunca más de dos fondos por pieza.</div>
+  </div>
+
+  <!-- 03 Tipografía -->
+  <div data-screen-label="Tipografia" style="display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; border-bottom: 1px solid #DDD2C2; padding-bottom: 14px;">
+      <span style="font-size: 13px; letter-spacing: 3px; color: #8A7355;">03</span>
+      <span style="font-size: 24px; font-weight: 400; letter-spacing: 4px;">TIPOGRAFÍA</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div style="background: #EDE5DA; border: 1px solid #DDD2C2; padding: 36px; display: flex; flex-direction: column; gap: 18px;">
+        <span style="font-size: 12px; letter-spacing: 3px; color: #8A7355;">ÚNICA FAMILIA · JOST (GOOGLE FONTS)</span>
+        <span style="font-weight: 500; font-size: 40px; line-height: 1.1;">Jost Medium — titulares y logo</span>
+        <span style="font-weight: 400; font-size: 26px; line-height: 1.2;">Jost Regular — subtítulos y navegación</span>
+        <span style="font-weight: 300; font-size: 18px; line-height: 1.5;">Jost Light — cuerpo de texto. Cálida, geométrica y silenciosa; funciona igual de bien en español y en inglés.</span>
+      </div>
+      <div style="background: #EDE5DA; border: 1px solid #DDD2C2; padding: 36px; display: flex; flex-direction: column; gap: 16px;">
+        <span style="font-size: 12px; letter-spacing: 3px; color: #8A7355;">REGLAS DE USO</span>
+        <span style="font-size: 14px; font-weight: 300; color: #5C5040;">— Etiquetas y palabras clave SIEMPRE en mayúsculas con tracking amplio (4–12 px)</span>
+        <span style="font-size: 14px; font-weight: 300; color: #5C5040;">— Titulares en peso 500, nunca bold pesado</span>
+        <span style="font-size: 14px; font-weight: 300; color: #5C5040;">— Cuerpo en peso 300, interlineado 1.5</span>
+        <span style="font-size: 14px; font-weight: 300; color: #5C5040;">— Máximo dos pesos por pieza</span>
+        <span style="font-size: 14px; font-weight: 300; color: #5C5040;">— Nunca cursivas, nunca subrayados decorativos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 Fotografía -->
+  <div data-screen-label="Fotografia" style="display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; border-bottom: 1px solid #DDD2C2; padding-bottom: 14px;">
+      <span style="font-size: 13px; letter-spacing: 3px; color: #8A7355;">04</span>
+      <span style="font-size: 24px; font-weight: 400; letter-spacing: 4px;">FOTOGRAFÍA</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px;">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="manual-foto" placeholder="Suelta aquí una foto de proyecto (ej. Alma Paz)" shape="rect" hint-size="100%,340px" style="width: 100%; height: 340px;"></x-import>
+      <div style="background: #EDE5DA; border: 1px solid #DDD2C2; padding: 36px; display: flex; flex-direction: column; gap: 16px;">
+        <span style="font-size: 12px; letter-spacing: 3px; color: #8A7355;">TRATAMIENTO</span>
+        <span style="font-size: 14px; font-weight: 300; color: #5C5040;">— Luz natural, tonos cálidos, sombras suaves</span>
+        <span style="font-size: 14px; font-weight: 300; color: #5C5040;">— Saturación baja: la obra habla, no el filtro</span>
+        <span style="font-size: 14px; font-weight: 300; color: #5C5040;">— Encuadres frontales o a un punto de fuga, horizontes rectos</span>
+        <span style="font-size: 14px; font-weight: 300; color: #5C5040;">— Texto sobre foto solo con velo Noche al 40–60%</span>
+        <span style="font-size: 14px; font-weight: 300; color: #5C5040;">— Sin marcos, sin collages, sin stickers</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 Voz -->
+  <div data-screen-label="Voz" style="display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; border-bottom: 1px solid #DDD2C2; padding-bottom: 14px;">
+      <span style="font-size: 13px; letter-spacing: 3px; color: #8A7355;">05</span>
+      <span style="font-size: 24px; font-weight: 400; letter-spacing: 4px;">TONO DE VOZ</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div style="background: #EDE5DA; border: 1px solid #DDD2C2; padding: 36px; display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 12px; letter-spacing: 3px; color: #8A7355;">CÁLIDO, MINIMALISTA, EDITORIAL</span>
+        <span style="font-size: 15px; font-weight: 300; color: #5C5040; line-height: 1.6;">Frases cortas. Primera persona («transformo», «te acompaño»). Se habla de espacios y de negocios, nunca de tendencias vacías. Cada palabra gana su lugar — si sobra, se quita.</span>
+        <span style="font-size: 14px; font-weight: 300; color: #7A6B54; font-style: normal;">ES: «Tu local, pensado para vender.»<br>EN: "Your store, designed to sell."</span>
+      </div>
+      <div style="background: #2E2620; padding: 36px; display: flex; flex-direction: column; gap: 14px; justify-content: center;">
+        <span style="font-size: 12px; letter-spacing: 3px; color: #A0917A;">FIRMA DIGITAL</span>
+        <span style="font-size: 15px; font-weight: 300; color: #EDE5DA; line-height: 1.8;">@gdestudio.arq<br>gdestudio.com.ar<br>contacto@gdestudio.com.ar<br>Córdoba, Argentina</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

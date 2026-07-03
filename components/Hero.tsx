@@ -1,20 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import HeroCanvas from "./HeroCanvas";
 
-// Mejores renders, uno por proyecto, para mostrar variedad en los primeros segundos.
+// Mejores renders, uno por proyecto. `src` son versiones livianas (1600px)
+// generadas en /public/hero exclusivamente para el canvas WebGL.
 const heroImages = [
-  { src: "/projects/alma-paz/Img_01_Alma Paz.webp", alt: "Alma Paz — local comercial en Urca, Córdoba" },
-  { src: "/projects/bacar/04-Taller Bacar Interior.webp", alt: "Taller Bacar — diseño industrial contemporáneo" },
-  { src: "/projects/la-dolfina/01-La Dolfina.Cba Shopping.webp", alt: "La Dolfina — retail de alta gama en Córdoba Shopping" },
-  { src: "/projects/peusso/PEUSSO_04.webp", alt: "Peusso — showroom de iluminación y tecnología" },
-  { src: "/projects/crocco/01_Crocco_Valle.webp", alt: "Crocco — espacio comercial en Valle Escondido" },
-  { src: "/projects/zhoue/1_Zhoue.webp", alt: "Zhoue — local de indumentaria en Nuevocentro Shopping" },
-  { src: "/projects/arka/ARKA_Nuevocentro_04.webp", alt: "Arka — remodelación de local en Nuevocentro Shopping" },
-  { src: "/projects/rustico-urca/render-1.webp", alt: "Rústico — espacio gastronómico en Urca" },
+  { src: "/hero/alma-paz.webp", alt: "Alma Paz — local comercial en Urca, Córdoba" },
+  { src: "/hero/bacar.webp", alt: "Taller Bacar — diseño industrial contemporáneo" },
+  { src: "/hero/la-dolfina.webp", alt: "La Dolfina — retail de alta gama en Córdoba Shopping" },
+  { src: "/hero/peusso.webp", alt: "Peusso — showroom de iluminación y tecnología" },
+  { src: "/hero/crocco.webp", alt: "Crocco — espacio comercial en Valle Escondido" },
+  { src: "/hero/zhoue.webp", alt: "Zhoue — local de indumentaria en Nuevocentro Shopping" },
+  { src: "/hero/arka.webp", alt: "Arka — remodelación de local en Nuevocentro Shopping" },
+  { src: "/hero/rustico.webp", alt: "Rústico — espacio gastronómico en Urca" },
 ];
 
 const SLIDE_DURATION = 5000; // ms por imagen
@@ -33,45 +35,17 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen md:h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Carrusel de fondo */}
+      {/* Carrusel de fondo: WebGL con distorsión líquida, imagen estática como base/fallback */}
       <div className="absolute inset-0 z-0 bg-black">
-        {reduceMotion ? (
-          <Image
-            src={heroImages[0].src}
-            alt={heroImages[0].alt}
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-        ) : (
-          <AnimatePresence>
-            <motion.div
-              key={index}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ opacity: { duration: 1.5, ease: "easeInOut" } }}
-              className="absolute inset-0"
-            >
-              <motion.div
-                initial={{ scale: 1 }}
-                animate={{ scale: 1.12 }}
-                transition={{ duration: (SLIDE_DURATION / 1000) + 1.5, ease: "linear" }}
-                className="absolute inset-0"
-              >
-                <Image
-                  src={heroImages[index].src}
-                  alt={heroImages[index].alt}
-                  fill
-                  priority={index === 0}
-                  className="object-cover"
-                  sizes="100vw"
-                />
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
-        )}
+        <Image
+          src={heroImages[0].src}
+          alt={heroImages[0].alt}
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        {!reduceMotion && <HeroCanvas images={heroImages} index={index} />}
         {/* Overlay oscuro para contraste */}
         <div className="absolute inset-0 bg-black/60 z-10"></div>
       </div>
