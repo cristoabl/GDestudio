@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { DARK_BLUR } from "@/lib/blur";
+import { LIGHT_BLUR } from "@/lib/blur";
 import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 interface ProjectGalleryProps {
@@ -47,14 +47,14 @@ export default function ProjectGallery({ images, projectName }: ProjectGalleryPr
             key={idx}
             onClick={() => setLightboxIndex(idx)}
             aria-label={`Ampliar imagen ${idx + 1} de ${projectName}`}
-            className="relative w-full aspect-[4/3] md:aspect-auto md:min-h-[60vh] bg-white/5 block cursor-zoom-in group"
+            className="relative w-full aspect-[4/3] md:aspect-auto md:min-h-[60vh] bg-crudo border border-linea block cursor-zoom-in group"
           >
             <Image
               src={img}
               alt={`${projectName} - Imagen ${idx + 1}`}
               fill
               placeholder="blur"
-              blurDataURL={DARK_BLUR}
+              blurDataURL={LIGHT_BLUR}
               className="object-cover group-hover:opacity-90 transition-opacity duration-300"
               sizes="(max-width: 768px) 100vw, 66vw"
             />
@@ -69,7 +69,7 @@ export default function ProjectGallery({ images, projectName }: ProjectGalleryPr
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center"
+            className="fixed inset-0 z-[100] bg-noche/95 backdrop-blur-sm flex items-center justify-center"
             onClick={close}
             role="dialog"
             aria-modal="true"
@@ -78,7 +78,7 @@ export default function ProjectGallery({ images, projectName }: ProjectGalleryPr
             <button
               onClick={close}
               aria-label="Cerrar galería"
-              className="absolute top-6 right-6 z-10 p-2 text-white/70 hover:text-white transition-colors"
+              className="absolute top-6 right-6 z-10 p-2 text-crudo/70 hover:text-crudo transition-colors"
             >
               <XMarkIcon className="w-8 h-8" />
             </button>
@@ -86,7 +86,7 @@ export default function ProjectGallery({ images, projectName }: ProjectGalleryPr
             <button
               onClick={(e) => { e.stopPropagation(); prev(); }}
               aria-label="Imagen anterior"
-              className="absolute left-4 md:left-8 z-10 p-3 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+              className="absolute left-4 md:left-8 z-10 p-3 text-crudo/70 hover:text-crudo hover:bg-crudo/10 transition-colors"
             >
               <ChevronLeftIcon className="w-8 h-8" />
             </button>
@@ -108,12 +108,12 @@ export default function ProjectGallery({ images, projectName }: ProjectGalleryPr
             <button
               onClick={(e) => { e.stopPropagation(); next(); }}
               aria-label="Imagen siguiente"
-              className="absolute right-4 md:right-8 z-10 p-3 text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+              className="absolute right-4 md:right-8 z-10 p-3 text-crudo/70 hover:text-crudo hover:bg-crudo/10 transition-colors"
             >
               <ChevronRightIcon className="w-8 h-8" />
             </button>
 
-            <span className="absolute bottom-6 left-1/2 -translate-x-1/2 text-sm text-white/60 tracking-widest">
+            <span className="absolute bottom-6 left-1/2 -translate-x-1/2 text-sm text-crudo/60 tracking-[0.2em]">
               {lightboxIndex + 1} / {images.length}
             </span>
           </motion.div>

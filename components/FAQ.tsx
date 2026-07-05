@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: "¿Qué abarca el servicio de diseño de locales comerciales en Córdoba?",
-    answer: "Ofrecemos un servicio llave en mano que abarca desde la conceptualización de marca, zonificación de áreas, diseño interior y mobiliario a medida, hasta visualización en 3D (renders fotorrealistas), desarrollo de legajo técnico de obra, iluminación estratégica y el asesoramiento en la habilitación municipal del local comercial en Córdoba."
+    answer: "Ofrecemos un servicio llave en mano que abarca desde la conceptualización de marca, zonificación de áreas, diseño interior y mobiliario a medida, hasta visualización en 3D (renders fotorrealistas), desarrollo de legajo técnico de obra, iluminación estratégica y el acompañamiento de la obra hasta la apertura."
   },
   {
     question: "¿Qué es el diseño comercial y en qué se diferencia de la arquitectura tradicional?",
@@ -27,14 +27,17 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 bg-black border-t border-white/10">
+    <section id="faq" className="py-24 md:py-32 bg-marfil border-t border-linea">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <h2 className="text-sm font-medium text-gray-400 tracking-widest uppercase mb-3">Preguntas Frecuentes</h2>
-          <h3 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight mb-6">
-            Arquitectura & Diseño Comercial
+          <div className="flex items-baseline justify-center gap-4 mb-4">
+            <span className="text-sm tracking-[0.25em] text-bronce">05</span>
+            <h2 className="eyebrow">Preguntas Frecuentes</h2>
+          </div>
+          <h3 className="text-4xl md:text-5xl font-medium text-tierra mb-6">
+            Arquitectura &amp; diseño comercial
           </h3>
-          <p className="text-gray-400 text-lg text-balance font-light">
+          <p className="text-texto-suave text-lg text-balance font-light leading-relaxed">
             Respondemos tus dudas sobre la creación de locales comerciales exitosos.
           </p>
         </div>
@@ -45,16 +48,16 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className="border border-white/10 bg-white/5 hover:border-white/20 transition-colors duration-300"
+                className="border border-linea bg-crudo hover:border-arena transition-colors duration-300"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
-                  className="w-full px-6 py-5 flex justify-between items-center text-left text-white font-medium focus:outline-none cursor-pointer"
+                  className="w-full px-6 py-5 flex justify-between items-center text-left text-tierra focus:outline-none cursor-pointer"
                 >
-                  <span className="text-lg md:text-xl font-heading font-semibold pr-4">{faq.question}</span>
+                  <span className="text-lg md:text-xl font-normal pr-4">{faq.question}</span>
                   <ChevronDownIcon
-                    className={`w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 ${
+                    className={`w-5 h-5 text-bronce shrink-0 transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -68,7 +71,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <p className="px-6 pb-6 text-gray-400 leading-relaxed font-light text-base text-balance border-t border-white/5 pt-4">
+                      <p className="px-6 pb-6 text-texto-suave leading-relaxed font-light text-base text-balance border-t border-linea pt-4">
                         {faq.answer}
                       </p>
                     </motion.div>

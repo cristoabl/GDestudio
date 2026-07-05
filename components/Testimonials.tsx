@@ -31,7 +31,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-24 bg-[#0a0a0a] border-t border-white/10">
+    <section id="testimonials" className="py-24 md:py-32 bg-marfil border-t border-linea">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <motion.div
@@ -40,8 +40,8 @@ export default function Testimonials() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-sm font-medium text-gray-400 tracking-widest uppercase mb-3">Testimonios</h2>
-            <h3 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight">
+            <h2 className="eyebrow mb-4 block">Testimonios</h2>
+            <h3 className="text-4xl md:text-5xl font-medium text-tierra">
               Lo que dicen los clientes
             </h3>
           </motion.div>
@@ -58,13 +58,13 @@ export default function Testimonials() {
             <motion.blockquote
               key={index}
               variants={itemVariants}
-              className="p-8 lg:p-12 bg-white/5 border border-white/5 flex flex-col justify-between"
+              className="p-8 lg:p-12 bg-crudo border border-linea flex flex-col justify-between"
             >
-              <p className="text-lg md:text-xl text-gray-200 font-light leading-relaxed mb-8 text-balance">
+              <p className="text-lg md:text-xl text-texto font-light leading-relaxed mb-8 text-balance">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
-              <footer className="border-t border-white/10 pt-6">
-                <span className="block text-white font-heading font-bold uppercase tracking-widest">{testimonial.company}</span>
+              <footer className="border-t border-linea pt-6">
+                <span className="block text-bronce text-xs font-normal uppercase tracking-[0.3em]">{testimonial.company}</span>
               </footer>
             </motion.blockquote>
           ))}

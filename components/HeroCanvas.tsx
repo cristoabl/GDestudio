@@ -153,7 +153,7 @@ export default function HeroCanvas({ images, index }: HeroCanvasProps) {
     const textures: Tex[] = images.map(() => {
       const texture = gl.createTexture()!;
       gl.bindTexture(gl.TEXTURE_2D, texture);
-      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, 1, 1, 0, gl.RGB, gl.UNSIGNED_BYTE, new Uint8Array([10, 10, 10]));
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, 1, 1, 0, gl.RGB, gl.UNSIGNED_BYTE, new Uint8Array([46, 38, 32]));
       return { texture, width: 1, height: 1, loaded: false };
     });
 

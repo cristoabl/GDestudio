@@ -1,11 +1,30 @@
 @import "tailwindcss";
 
+/*
+ * Sistema de diseño — Manual de Marca GD · 2026
+ * Paleta: Crudo domina (~70%), Tierra y Noche estructuran (~25%), Bronce acentúa (~5%).
+ * Tipografía: Jost única familia — 500 titulares, 400 subtítulos/navegación, 300 cuerpo.
+ */
 @theme {
-  --color-background: #0a0a0a;
-  --color-foreground: #ededed;
-  
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Paleta del manual */
+  --color-noche: #2e2620;
+  --color-tierra: #4a3f30;
+  --color-bronce: #8a7355;
+  --color-arena: #c8b99f;
+  --color-crudo: #ede5da;
+
+  /* Tonos de apoyo (derivados del manual) */
+  --color-marfil: #f2ede4; /* fondo de página */
+  --color-linea: #ddd2c2; /* bordes y divisores sobre claro */
+  --color-texto: #5c5040; /* cuerpo de texto sobre claro */
+  --color-texto-suave: #7a6b54; /* texto secundario sobre claro */
+  --color-arena-suave: #a0917a; /* texto secundario sobre oscuro */
+
+  --color-background: var(--color-marfil);
+  --color-foreground: var(--color-tierra);
+
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -13,10 +32,10 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased selection:bg-white/20;
+    @apply bg-background text-texto font-sans font-light antialiased selection:bg-arena/50 selection:text-noche;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading tracking-tight;
+    @apply font-heading font-medium text-tierra;
   }
 }
 
@@ -25,7 +44,16 @@
   .text-balance {
     text-wrap: balance;
   }
+  /* Etiqueta editorial: mayúsculas con tracking amplio, acento Bronce */
+  .eyebrow {
+    @apply text-xs font-normal uppercase tracking-[0.35em] text-bronce;
+  }
+  .eyebrow-dark {
+    @apply text-xs font-normal uppercase tracking-[0.35em] text-arena-suave;
+  }
+  /* Navbar al hacer scroll: velo Crudo translúcido */
   .glass {
-    @apply bg-black/40 backdrop-blur-md border-b border-white/10;
+    background-color: rgba(242, 237, 228, 0.9);
+    @apply backdrop-blur-md border-b border-linea;
   }
 }

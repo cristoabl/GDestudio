@@ -1,11 +1,11 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { 
-  BuildingStorefrontIcon, 
-  WrenchScrewdriverIcon, 
-  CubeTransparentIcon, 
-  DocumentTextIcon 
+import {
+  BuildingStorefrontIcon,
+  WrenchScrewdriverIcon,
+  CubeTransparentIcon,
+  DocumentTextIcon
 } from "@heroicons/react/24/outline";
 
 const services = [
@@ -46,7 +46,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-24 bg-[#0a0a0a]">
+    <section id="services" className="py-24 md:py-32 bg-marfil border-t border-linea">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <motion.div
@@ -55,36 +55,39 @@ export default function Services() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-sm font-medium text-gray-400 tracking-widest uppercase mb-3">Especialidad</h2>
-            <h3 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight mb-6">
-              Arquitectura & Diseño Comercial
+            <div className="flex items-baseline justify-center gap-4 mb-4">
+              <span className="text-sm tracking-[0.25em] text-bronce">02</span>
+              <h2 className="eyebrow">Especialidad</h2>
+            </div>
+            <h3 className="text-4xl md:text-5xl font-medium text-tierra mb-6">
+              Arquitectura &amp; diseño comercial
             </h3>
-            <p className="text-gray-400 text-lg text-balance font-light">
+            <p className="text-texto-suave text-lg text-balance font-light leading-relaxed">
               Soluciones integrales de diseño y remodelación de locales comerciales enfocadas en resultados reales de negocio.
             </p>
           </motion.div>
         </div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10"
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
           {services.map((service, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               variants={itemVariants}
-              className="p-8 lg:p-12 bg-white/5 border border-white/5 hover:bg-white/10 transition-colors duration-300 group"
+              className="p-8 lg:p-12 bg-crudo border border-linea hover:border-arena transition-colors duration-300 group"
             >
-              <div className="w-14 h-14 bg-white/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 border border-bronce/40 flex items-center justify-center mb-8 group-hover:bg-noche group-hover:border-noche transition-colors duration-300">
+                <service.icon className="w-7 h-7 text-bronce group-hover:text-crudo transition-colors duration-300" />
               </div>
-              <h4 className="text-2xl font-heading font-bold text-white mb-4">
+              <h4 className="text-2xl font-medium text-tierra mb-4">
                 {service.title}
               </h4>
-              <p className="text-gray-400 leading-relaxed font-light">
+              <p className="text-texto-suave leading-relaxed font-light">
                 {service.description}
               </p>
             </motion.div>

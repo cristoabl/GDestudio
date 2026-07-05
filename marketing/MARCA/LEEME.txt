@@ -18,4 +18,6 @@ CÓMO USARLAS:
 Al subir un reel, en el paso de portada elegí "de la galería" y seleccioná la que va.
 Tip: usar siempre la misma portada por tipo de contenido hace que tu grilla se vea ordenada y profesional.
 
-Todo en la tipografía y colores de la marca (negro / blanco, Poppins ≈ tu web).
+Todo en la tipografía y colores del Manual de Marca GD 2026:
+tipografía Jost (300/400/500) y paleta Noche #2E2620 / Tierra #4A3F30 /
+Bronce #8A7355 / Arena #C8B99F / Crudo #EDE5DA — igual que la web.

@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GD Estudio — gdestudio.com.ar
 
-## Getting Started
+Sitio web de GD Estudio, estudio de arquitectura comercial y diseño de locales en Córdoba, Argentina. Construido con [Next.js](https://nextjs.org) (App Router), Tailwind CSS v4 y Framer Motion.
 
-First, run the development server:
+## Identidad de marca
+
+El diseño implementa el **Manual de Marca GD · 2026** (`Manual de Marca GD.dc.html`):
+
+| Color | Hex | Uso |
+| --- | --- | --- |
+| Noche | `#2E2620` | Fondos oscuros, footer |
+| Tierra | `#4A3F30` | Logo y titulares en claro |
+| Bronce | `#8A7355` | Acentos, subtítulos, enlaces |
+| Arena | `#C8B99F` | Detalles sobre fondo oscuro |
+| Crudo | `#EDE5DA` | Fondo principal de la marca |
+
+- **Tipografía:** Jost (Google Fonts), única familia — 500 titulares, 400 subtítulos, 300 cuerpo.
+- **Reglas:** etiquetas en mayúsculas con tracking amplio; Crudo domina (~70%), Tierra/Noche estructuran (~25%), Bronce acentúa (~5%); texto sobre foto solo con velo Noche al 40–60%.
+
+Los tokens de color viven en `app/globals.css` (`@theme`) y se usan como clases Tailwind (`bg-noche`, `text-bronce`, `border-linea`, etc.).
+
+## Desarrollo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # servidor de desarrollo en http://localhost:3000
+npm run build   # build de producción
+npm run start   # servir el build
+npm run lint    # ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estructura
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/` — layout (fuente, metadata, JSON-LD), home, páginas de proyecto (`/proyecto/[slug]`), sitemap y robots.
+- `components/` — secciones de la home, navbar, footer, galería con lightbox, carrusel WebGL del hero.
+- `data/projects.ts` — contenido del portfolio (proyectos, imágenes, fichas técnicas).
+- `public/` — imágenes optimizadas (webp), favicon y OG images generados con la identidad de marca.

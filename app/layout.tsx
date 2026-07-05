@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Jost } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+// Única familia tipográfica de la marca: Jost (300 cuerpo, 400 subtítulos, 500 titulares).
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
+  weight: ["300", "400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -17,6 +14,9 @@ export const metadata: Metadata = {
   description:
     "Estudio de arquitectura comercial y diseño de locales comerciales en Córdoba. Especialistas en diseño de locales, retail, stands y remodelaciones comerciales en Argentina.",
   metadataBase: new URL("https://gdestudio.com.ar"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "GD Estudio | Arquitectura Comercial en Córdoba",
     description:
@@ -117,7 +117,7 @@ const faqPageSchema = {
       "name": "¿Qué abarca el servicio de diseño de locales comerciales en Córdoba?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ofrecemos un servicio llave en mano que abarca desde la conceptualización de marca, zonificación de áreas, diseño interior y mobiliario a medida, hasta visualización en 3D (renders fotorrealistas), desarrollo de legajo técnico de obra, iluminación estratégica y el asesoramiento en la habilitación municipal del local comercial en Córdoba."
+        "text": "Ofrecemos un servicio llave en mano que abarca desde la conceptualización de marca, zonificación de áreas, diseño interior y mobiliario a medida, hasta visualización en 3D (renders fotorrealistas), desarrollo de legajo técnico de obra, iluminación estratégica y el acompañamiento de la obra hasta la apertura."
       }
     },
     {
@@ -145,7 +145,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className={`${jost.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"
@@ -157,7 +157,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${outfit.variable} antialiased bg-black text-white min-h-screen flex flex-col`}
+        className="antialiased bg-marfil text-texto min-h-screen flex flex-col"
       >
         {children}
       </body>

@@ -30,14 +30,14 @@ export default function Contact() {
         setStatus("error");
         setErrorMessage(data.message || "Hubo un error al enviar tu mensaje.");
       }
-    } catch (err) {
+    } catch {
       setStatus("error");
       setErrorMessage("No se pudo conectar con el servidor.");
     }
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#0a0a0a] border-t border-white/10">
+    <section id="contact" className="py-24 md:py-32 bg-noche">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -49,25 +49,28 @@ export default function Contact() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-sm font-medium text-gray-400 tracking-widest uppercase mb-3">Contacto</h2>
-              <h3 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight mb-6 text-balance">
+              <div className="flex items-baseline gap-4 mb-4">
+                <span className="text-sm tracking-[0.25em] text-arena-suave">06</span>
+                <h2 className="eyebrow-dark">Contacto</h2>
+              </div>
+              <h3 className="text-4xl md:text-5xl font-medium text-crudo mb-6 text-balance">
                 Empecemos tu proyecto
               </h3>
-              <p className="text-gray-400 font-light text-lg mb-10 leading-relaxed text-balance">
+              <p className="text-arena-suave font-light text-lg mb-10 leading-relaxed text-balance">
                 Cada gran espacio comienza con una conversación. Contame sobre tu marca, tus objetivos y los desafíos de tu próximo proyecto.
               </p>
 
               <div className="space-y-6">
                 <a
                   href="mailto:contacto@gdestudio.com.ar"
-                  className="group flex items-center gap-4 p-4 border border-white/10 hover:border-white/30 bg-white/5 transition-all"
+                  className="group flex items-center gap-4 p-4 border border-crudo/15 hover:border-arena/50 transition-all"
                 >
-                  <div className="w-12 h-12 bg-white/10 flex items-center justify-center rounded-none group-hover:bg-white group-hover:text-black transition-colors">
+                  <div className="w-12 h-12 border border-arena/40 text-arena flex items-center justify-center group-hover:bg-crudo group-hover:border-crudo group-hover:text-noche transition-colors">
                     <EnvelopeIcon className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="block text-xs uppercase tracking-widest text-gray-500 mb-1">Email</span>
-                    <span className="text-white font-medium group-hover:text-gray-300 transition-colors">contacto@gdestudio.com.ar</span>
+                    <span className="block text-[10px] uppercase tracking-[0.25em] text-arena-suave mb-1">Email</span>
+                    <span className="text-crudo font-light group-hover:text-arena transition-colors">contacto@gdestudio.com.ar</span>
                   </div>
                 </a>
 
@@ -75,14 +78,14 @@ export default function Contact() {
                   href="https://wa.me/5493512139252"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-4 border border-white/10 hover:border-white/30 bg-white/5 transition-all"
+                  className="group flex items-center gap-4 p-4 border border-crudo/15 hover:border-arena/50 transition-all"
                 >
-                  <div className="w-12 h-12 bg-[#25D366]/20 text-[#25D366] flex items-center justify-center rounded-none group-hover:bg-[#25D366] group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 border border-arena/40 text-arena flex items-center justify-center group-hover:bg-crudo group-hover:border-crudo group-hover:text-noche transition-colors">
                     <PhoneIcon className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="block text-xs uppercase tracking-widest text-gray-500 mb-1">WhatsApp Directo</span>
-                    <span className="text-white font-medium">+54 9 351 213-9252</span>
+                    <span className="block text-[10px] uppercase tracking-[0.25em] text-arena-suave mb-1">WhatsApp Directo</span>
+                    <span className="text-crudo font-light">+54 9 351 213-9252</span>
                   </div>
                 </a>
               </div>
@@ -94,20 +97,20 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white/5 p-8 border border-white/10 relative"
+              className="border border-crudo/15 p-8 relative"
             >
               {status === "success" ? (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm z-10 p-8 text-center border border-white/20">
-                  <div className="w-16 h-16 bg-white flex items-center justify-center mb-6">
-                    <svg className="w-8 h-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-noche/95 backdrop-blur-sm z-10 p-8 text-center border border-arena/30">
+                  <div className="w-16 h-16 bg-crudo flex items-center justify-center mb-6">
+                    <svg className="w-8 h-8 text-noche" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h4 className="text-2xl font-heading font-bold text-white mb-2">¡Mensaje Enviado!</h4>
-                  <p className="text-gray-400">Gracias por contactarte. Te responderé a la brevedad.</p>
+                  <h4 className="text-2xl font-medium text-crudo mb-2">¡Mensaje enviado!</h4>
+                  <p className="text-arena-suave font-light">Gracias por contactarte. Te responderé a la brevedad.</p>
                   <button
                     onClick={() => setStatus("idle")}
-                    className="mt-8 px-6 py-2 border border-white/30 text-white hover:bg-white hover:text-black transition-colors"
+                    className="mt-8 px-6 py-2.5 border border-arena/50 text-xs uppercase tracking-[0.2em] text-crudo hover:bg-crudo hover:text-noche transition-colors"
                   >
                     Enviar otro mensaje
                   </button>
@@ -119,12 +122,12 @@ export default function Contact() {
                 <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Nombre completo</label>
+                  <label htmlFor="name" className="block text-[10px] uppercase tracking-[0.25em] text-arena-suave mb-2">Nombre completo</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full bg-transparent border-b border-white/20 px-0 py-3 text-white focus:outline-none focus:border-white transition-colors"
+                    className="w-full bg-transparent border-b border-crudo/25 px-0 py-3 text-crudo font-light placeholder:text-crudo/30 focus:outline-none focus:border-arena transition-colors"
                     placeholder="Tu nombre"
                     required
                   />
@@ -132,50 +135,68 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                    <label htmlFor="email" className="block text-[10px] uppercase tracking-[0.25em] text-arena-suave mb-2">Email</label>
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      className="w-full bg-transparent border-b border-white/20 px-0 py-3 text-white focus:outline-none focus:border-white transition-colors"
+                      className="w-full bg-transparent border-b border-crudo/25 px-0 py-3 text-crudo font-light placeholder:text-crudo/30 focus:outline-none focus:border-arena transition-colors"
                       placeholder="nombre@empresa.com"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-400 mb-2">Teléfono</label>
+                    <label htmlFor="phone" className="block text-[10px] uppercase tracking-[0.25em] text-arena-suave mb-2">Teléfono</label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
-                      className="w-full bg-transparent border-b border-white/20 px-0 py-3 text-white focus:outline-none focus:border-white transition-colors"
+                      className="w-full bg-transparent border-b border-crudo/25 px-0 py-3 text-crudo font-light placeholder:text-crudo/30 focus:outline-none focus:border-arena transition-colors"
                       placeholder="+54 9..."
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">Mensaje</label>
+                  <label htmlFor="tipo_proyecto" className="block text-[10px] uppercase tracking-[0.25em] text-arena-suave mb-2">¿Qué necesitás?</label>
+                  <select
+                    id="tipo_proyecto"
+                    name="tipo_proyecto"
+                    required
+                    defaultValue=""
+                    className="w-full bg-transparent border-b border-crudo/25 px-0 py-3 text-crudo font-light focus:outline-none focus:border-arena transition-colors appearance-none cursor-pointer invalid:text-crudo/30"
+                  >
+                    <option value="" disabled className="bg-noche text-crudo/50">Seleccioná una opción</option>
+                    <option value="Local nuevo" className="bg-noche text-crudo">Local nuevo</option>
+                    <option value="Remodelación" className="bg-noche text-crudo">Remodelación</option>
+                    <option value="Visualización 3D / Renders" className="bg-noche text-crudo">Visualización 3D / Renders</option>
+                    <option value="Legajo técnico" className="bg-noche text-crudo">Legajo técnico</option>
+                    <option value="Otro" className="bg-noche text-crudo">Otro</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-[10px] uppercase tracking-[0.25em] text-arena-suave mb-2">Mensaje</label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
-                    className="w-full bg-transparent border-b border-white/20 px-0 py-3 text-white focus:outline-none focus:border-white transition-colors resize-none"
+                    className="w-full bg-transparent border-b border-crudo/25 px-0 py-3 text-crudo font-light placeholder:text-crudo/30 focus:outline-none focus:border-arena transition-colors resize-none"
                     placeholder="Contame sobre tu proyecto..."
                     required
                   ></textarea>
                 </div>
 
                 {status === "error" && (
-                  <p className="text-red-400 text-sm mt-2">{errorMessage}</p>
+                  <p className="text-arena text-sm mt-2">{errorMessage}</p>
                 )}
 
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="mt-4 w-full bg-white text-black font-medium py-4 hover:bg-gray-200 transition-colors uppercase tracking-widest text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="mt-4 w-full bg-crudo text-noche font-normal py-4 hover:bg-arena transition-colors uppercase tracking-[0.25em] text-xs disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {status === "loading" ? "Enviando..." : "Enviar Mensaje"}
+                  {status === "loading" ? "Enviando..." : "Enviar mensaje"}
                 </button>
               </form>
             </motion.div>
