@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 // Única familia tipográfica de la marca: Jost (300 cuerpo, 400 subtítulos, 500 titulares).
@@ -160,6 +161,13 @@ export default function RootLayout({
         className="antialiased bg-marfil text-texto min-h-screen flex flex-col"
       >
         {children}
+        <Script
+          id="cloudflare-web-analytics"
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"b04f7ba73e25471e8e591ae764ddc7ec"}'
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
