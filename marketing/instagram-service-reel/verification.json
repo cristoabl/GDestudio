@@ -1,0 +1,176 @@
+{
+  "file": "GD-Estudio-reel-servicios.mp4",
+  "duration_seconds": 25,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames_fully_decoded": 750,
+  "codec": "H.264",
+  "pixel_format": "yuv420p",
+  "audio": "Silent master: no audio track",
+  "fast_start": true,
+  "text_bounds": [
+    [
+      "GD ESTUDIO",
+      [
+        110,
+        281,
+        310,
+        306
+      ]
+    ],
+    [
+      "ARQUITECTURA COMERCIAL",
+      [
+        110,
+        897,
+        508,
+        919
+      ]
+    ],
+    [
+      "Tu local,\npensado\npara vender.",
+      [
+        110,
+        996,
+        661,
+        1320
+      ]
+    ],
+    [
+      "Espacios que hablan\nde tu marca.",
+      [
+        110,
+        420,
+        739,
+        559
+      ]
+    ],
+    [
+      "ZHOUE",
+      [
+        110,
+        1339,
+        202,
+        1358
+      ]
+    ],
+    [
+      "Visualización 3D",
+      [
+        110,
+        1382,
+        301,
+        1406
+      ]
+    ],
+    [
+      "Diseño comercial,\na tu medida.",
+      [
+        110,
+        420,
+        665,
+        559
+      ]
+    ],
+    [
+      "ARKA",
+      [
+        110,
+        1337,
+        182,
+        1358
+      ]
+    ],
+    [
+      "Cada detalle\ncuenta.",
+      [
+        110,
+        438,
+        610,
+        616
+      ]
+    ],
+    [
+      "De la idea\nal espacio.",
+      [
+        110,
+        1053,
+        566,
+        1263
+      ]
+    ],
+    [
+      "ARQUITECTURA COMERCIAL",
+      [
+        110,
+        540,
+        508,
+        562
+      ]
+    ],
+    [
+      "Hablemos de tu\npróximo local.",
+      [
+        110,
+        662,
+        699,
+        852
+      ]
+    ],
+    [
+      "@gdestudio.arq",
+      [
+        110,
+        1055,
+        450,
+        1104
+      ]
+    ],
+    [
+      "gdestudio.com.ar",
+      [
+        110,
+        1139,
+        394,
+        1177
+      ]
+    ],
+    [
+      "CÓRDOBA, ARGENTINA",
+      [
+        110,
+        1342,
+        389,
+        1372
+      ]
+    ]
+  ],
+  "safe_text_region": [
+    100,
+    245,
+    925,
+    1460
+  ],
+  "font": "Jost (local website WOFF2, regular and medium)",
+  "source_paths": [
+    "marketing/RUSTICO/DESPUES/09.jpeg",
+    "public/projects/zhoue/1_Zhoue.webp",
+    "public/projects/arka/ARKA_Nuevocentro_04.webp",
+    "marketing/RUSTICO/DESPUES/06.jpeg",
+    "marketing/RUSTICO/DESPUES/10.jpeg"
+  ],
+  "render_labels": {
+    "public/projects/zhoue/1_Zhoue.webp": "Visualización 3D",
+    "public/projects/arka/ARKA_Nuevocentro_04.webp": "Visualización 3D"
+  },
+  "decode_exit_code": 0,
+  "bytes": 4522284,
+  "contact_sheet": "12 representative frames extracted from the encoded MP4",
+  "limitations": [
+    "Still-image motion edit, not live-action footage",
+    "No music rights assumed; silent master"
+  ]
+}
