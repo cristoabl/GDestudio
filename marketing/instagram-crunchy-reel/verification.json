@@ -1,0 +1,205 @@
+{
+  "duration_seconds": 16,
+  "fps": 30,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "exports": {
+    "GD-Estudio-reel-crunchy.mp4": {
+      "decoded_frames": 480,
+      "bytes": 4287505,
+      "full_decode_exit_code": 0,
+      "codec": "H.264",
+      "pixel_format": "yuv420p",
+      "audio": "AAC stereo"
+    },
+    "GD-Estudio-reel-crunchy-sin-musica.mp4": {
+      "decoded_frames": 480,
+      "bytes": 3866771,
+      "full_decode_exit_code": 0,
+      "codec": "H.264",
+      "pixel_format": "yuv420p",
+      "audio": "none"
+    }
+  },
+  "first_reel_sha256_unchanged": "326c4f4a43a07e90dfda9fe3e248947ce00e48be03eb588a940a40a75aab1fb5",
+  "bpm": 120,
+  "beat_aligned_scene_boundaries": [
+    0,
+    3,
+    5,
+    6,
+    8,
+    9,
+    10,
+    13,
+    16
+  ],
+  "audio_origin": "Original local oscillator/noise synthesis; no recordings, samples or external music",
+  "audio_peak_dbfs": -4.179678020430858,
+  "audio_rms_dbfs": -19.030875084360442,
+  "decoded_audio_seconds": 16.0,
+  "audio_listening": "Not performed; decoded-signal checks only",
+  "audio_fades_seconds": [
+    0.012,
+    0.35
+  ],
+  "sources": [
+    "marketing/RUSTICO/DESPUES/09.jpeg",
+    "public/projects/zhoue/1_Zhoue.webp",
+    "marketing/RUSTICO/DESPUES/06.jpeg",
+    "public/projects/arka/ARKA_Nuevocentro_04.webp",
+    "marketing/RUSTICO/DESPUES/10.jpeg"
+  ],
+  "render_sources": [
+    "public/projects/zhoue/1_Zhoue.webp",
+    "public/projects/arka/ARKA_Nuevocentro_04.webp"
+  ],
+  "text_bounds": {
+    "QUE TU LOCAL": [
+      110,
+      637,
+      848,
+      745
+    ],
+    "ARQUITECTURA COMERCIAL": [
+      110,
+      1355,
+      508,
+      1377
+    ],
+    "GD ESTUDIO": [
+      110,
+      283,
+      324,
+      309
+    ],
+    "ARQUITECTURA + IDENTIDAD": [
+      110,
+      334,
+      448,
+      352
+    ],
+    "NO PASE": [
+      110,
+      828,
+      734,
+      969
+    ],
+    "DESAPERCIBIDO.": [
+      110,
+      1028,
+      886,
+      1131
+    ],
+    "TU MARCA.": [
+      110,
+      473,
+      770,
+      597
+    ],
+    "EN CADA ESPACIO.": [
+      110,
+      1302,
+      746,
+      1385
+    ],
+    "ZHOUE · Visualización 3D": [
+      110,
+      1403,
+      447,
+      1428
+    ],
+    "DETALLES.": [
+      110,
+      1075,
+      753,
+      1203
+    ],
+    "DISEÑO.": [
+      110,
+      454,
+      617,
+      600
+    ],
+    "CON IDENTIDAD.": [
+      110,
+      1302,
+      666,
+      1385
+    ],
+    "ARKA · Visualización 3D": [
+      109,
+      1403,
+      426,
+      1428
+    ],
+    "RECORRIDO.": [
+      110,
+      1078,
+      885,
+      1202
+    ],
+    "EXPERIENCIA.": [
+      110,
+      1070,
+      888,
+      1193
+    ],
+    "ARQUITECTURA": [
+      110,
+      898,
+      837,
+      1002
+    ],
+    "COMERCIAL.": [
+      110,
+      1061,
+      839,
+      1181
+    ],
+    "CÓRDOBA · ARGENTINA": [
+      110,
+      1347,
+      462,
+      1380
+    ],
+    "HABLEMOS.": [
+      110,
+      627,
+      869,
+      760
+    ],
+    "TU PRÓXIMO LOCAL": [
+      110,
+      823,
+      576,
+      900
+    ],
+    "EMPIEZA CON UNA IDEA.": [
+      110,
+      905,
+      696,
+      972
+    ],
+    "@gdestudio.arq": [
+      110,
+      1102,
+      538,
+      1164
+    ],
+    "gdestudio.com.ar": [
+      110,
+      1204,
+      459,
+      1249
+    ]
+  },
+  "font": "Jost Medium",
+  "contact_sheet": "12 frames extracted from encoded MP4",
+  "limitations": [
+    "Still-image motion edit",
+    "No Instagram upload test or publication"
+  ]
+}
