@@ -31,4 +31,8 @@ Produce a polished Spanish promotional Instagram reel for GD Estudio using exist
 - Parent inspected cover and 12-frame scene contact sheet: legible copy, no clipping, full-width renders preserved.
 - Files: marketing/instagram-service-reel/GD-Estudio-reel-servicios.mp4, GD-Estudio-portada.jpg, caption.txt, generator and verification evidence.
 - Application lint/build: not applicable; no application source changed. Instagram live upload: not performed, publication not authorized. Audio: intentionally omitted for user-selected in-app music.
-- Next: commit the verified unit, assess native risk, record identity and close.
+- Work-unit commit: cf4b455, `feat(marketing): create branded architecture services reel`.
+- Authored change count: 240 lines at work-unit commit; 254 generated verification/log lines excluded from delivery forecast; no PR created.
+- Initial whitespace check flagged raw encoder log formatting; normalized only newly generated logs and rechecking. Video content unchanged.
+- Native assessment: high / review_due=true / process_boundary (generator invokes FFmpeg); candidate consent and native review pending. Pre-existing untracked files excluded using canonical inventory. No approval claimed.
+- Next: obtain native candidate consent; deliver verified media without publishing. Engram mirror remains unavailable due to ambiguous session binding.
