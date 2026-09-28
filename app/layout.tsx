@@ -60,16 +60,10 @@ const architecturalOfficeSchema = {
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Urca",
     "addressLocality": "Córdoba",
     "addressRegion": "Córdoba",
     "postalCode": "5000",
     "addressCountry": "AR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -31.3789,
-    "longitude": -64.2415
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
