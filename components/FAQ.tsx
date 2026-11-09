@@ -1,13 +1,8 @@
-"use client";
-
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { homeFaqs as faqs } from "@/data/faqs";
 
+// Native details/summary keeps the answers in the server HTML for search engines.
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
     <section id="faq" className="py-24 md:py-32 bg-marfil border-t border-linea">
       <div className="container mx-auto px-6 md:px-12">
@@ -25,43 +20,20 @@ export default function FAQ() {
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div
-                key={index}
-                className="border border-linea bg-crudo hover:border-arena transition-colors duration-300"
-              >
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  aria-expanded={isOpen}
-                  className="w-full px-6 py-5 flex justify-between items-center text-left text-tierra focus:outline-none cursor-pointer"
-                >
-                  <span className="text-lg md:text-xl font-normal pr-4">{faq.question}</span>
-                  <ChevronDownIcon
-                    className={`w-5 h-5 text-bronce shrink-0 transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="overflow-hidden"
-                    >
-                      <p className="px-6 pb-6 text-texto-suave leading-relaxed font-light text-base text-balance border-t border-linea pt-4">
-                        {faq.answer}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
+          {faqs.map((faq) => (
+            <details
+              key={faq.question}
+              className="group border border-linea bg-crudo hover:border-arena transition-colors duration-300"
+            >
+              <summary className="w-full px-6 py-5 flex justify-between items-center text-left text-tierra cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                <span className="text-lg md:text-xl font-normal pr-4">{faq.question}</span>
+                <ChevronDownIcon className="w-5 h-5 text-bronce shrink-0 transition-transform duration-300 group-open:rotate-180" />
+              </summary>
+              <p className="px-6 pb-6 text-texto-suave leading-relaxed font-light text-base text-balance border-t border-linea pt-4">
+                {faq.answer}
+              </p>
+            </details>
+          ))}
         </div>
       </div>
     </section>
