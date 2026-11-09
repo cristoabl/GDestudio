@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Página no encontrada | GD Estudio",
+  // Do not inherit the home canonical from the root layout.
+  alternates: { canonical: null },
 };
 
 export default function NotFound() {
