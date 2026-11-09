@@ -7,5 +7,7 @@ services:
     restart: always
     ports:
       - "127.0.0.1:3002:3000"
+    env_file:
+      - /home/opc/.config/gdestudio/instagram-webhook.env
     environment:
       - NODE_ENV=production
