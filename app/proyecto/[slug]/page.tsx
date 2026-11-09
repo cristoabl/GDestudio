@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/projects";
+import { services } from "@/data/services";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProjectGallery from "@/components/ProjectGallery";
@@ -20,14 +21,15 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     return { title: "Proyecto no encontrado" };
   }
 
+  const title = `${project.seoTitle} | GD Estudio`;
   return {
-    title: `${project.name} | GD Estudio`,
+    title,
     description: project.description,
     alternates: {
       canonical: `/proyecto/${project.slug}`,
     },
     openGraph: {
-      title: `${project.name} | GD Estudio`,
+      title,
       description: project.description,
       url: `/proyecto/${project.slug}`,
       type: "article",
@@ -40,7 +42,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.name} | GD Estudio`,
+      title,
       description: project.description,
       images: [project.coverImage],
     },
@@ -60,6 +62,8 @@ export default async function ProjectPage({ params }: { params: Params }) {
   if (!project) {
     notFound();
   }
+
+  const relatedService = services.find((s) => s.slug === project.serviceSlug);
 
   // Find next and prev projects for navigation
   const currentIndex = projects.findIndex(p => p.slug === resolvedParams.slug);
@@ -152,6 +156,11 @@ export default async function ProjectPage({ params }: { params: Params }) {
                 <p className="text-xl text-texto font-light leading-relaxed mb-8">
                   {project.description}
                 </p>
+                {project.details?.map((paragraph) => (
+                  <p key={paragraph} className="text-lg text-texto-suave font-light leading-relaxed mb-6">
+                    {paragraph}
+                  </p>
+                ))}
 
                 {/* Ficha técnica */}
                 <dl className="border-t border-linea divide-y divide-linea mb-8">
@@ -180,6 +189,21 @@ export default async function ProjectPage({ params }: { params: Params }) {
                     </div>
                   )}
                 </dl>
+
+                {relatedService && (
+                  <Link
+                    href={`/servicios/${relatedService.slug}`}
+                    className="group block border border-linea bg-crudo hover:border-arena transition-colors p-6 mb-8"
+                  >
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-bronce block mb-2">Servicio</span>
+                    <span className="text-lg font-medium text-tierra block mb-2 group-hover:translate-x-1 transition-transform">
+                      {relatedService.title}
+                    </span>
+                    <span className="text-sm text-texto-suave font-light leading-relaxed block">
+                      {relatedService.description}
+                    </span>
+                  </Link>
+                )}
 
                 <div className="flex gap-4 border-t border-linea pt-8">
                   <Link

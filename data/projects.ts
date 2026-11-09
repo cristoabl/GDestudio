@@ -11,11 +11,22 @@ export type Project = {
   area?: string;
   /** Servicios prestados en el proyecto. */
   services?: string[];
+  /** Page title written for search: what was done, for whom and where. */
+  seoTitle: string;
+  /** Slug of the matching page in data/services.ts. */
+  serviceSlug: string;
+  /**
+   * Optional extra paragraphs (brief, solution, result).
+   * Fill only with facts confirmed by the studio.
+   */
+  details?: string[];
 };
 
 export const projects: Project[] = [
   {
     slug: "alma-paz",
+    seoTitle: "Diseño del local Alma Paz en Urca, Córdoba",
+    serviceSlug: "diseno-de-locales-comerciales",
     name: "Alma Paz",
     location: "Urca, Córdoba",
     category: "Local Comercial",
@@ -34,6 +45,8 @@ export const projects: Project[] = [
   },
   {
     slug: "arka",
+    seoTitle: "Remodelación del local Arka en Nuevocentro Shopping, Córdoba",
+    serviceSlug: "remodelacion-de-locales-comerciales",
     name: "Arka",
     location: "Nuevocentro Shopping",
     category: "Retail",
@@ -51,6 +64,8 @@ export const projects: Project[] = [
   },
   {
     slug: "bacar",
+    seoTitle: "Diseño integral del Taller Bacar en Córdoba",
+    serviceSlug: "legajo-tecnico-y-renders-3d",
     name: "Bacar",
     location: "Córdoba",
     category: "Taller / Comercial",
@@ -69,6 +84,8 @@ export const projects: Project[] = [
   },
   {
     slug: "crocco",
+    seoTitle: "Diseño del local Crocco en Valle Escondido, Córdoba",
+    serviceSlug: "diseno-de-locales-comerciales",
     name: "Crocco",
     location: "Valle Escondido",
     category: "Comercial / Retail",
@@ -88,6 +105,8 @@ export const projects: Project[] = [
   },
   {
     slug: "la-dolfina",
+    seoTitle: "Diseño del local La Dolfina en Córdoba Shopping",
+    serviceSlug: "diseno-de-locales-comerciales",
     name: "La Dolfina",
     location: "Cba Shopping",
     category: "Retail / Alta Gama",
@@ -108,6 +127,8 @@ export const projects: Project[] = [
   },
   {
     slug: "peusso",
+    seoTitle: "Diseño del showroom Peusso en Córdoba",
+    serviceSlug: "diseno-de-locales-comerciales",
     name: "Peusso",
     location: "Córdoba",
     category: "Showroom",
@@ -127,6 +148,8 @@ export const projects: Project[] = [
   },
   {
     slug: "zhoue",
+    seoTitle: "Diseño del local Zhoue en Nuevocentro Shopping, Córdoba",
+    serviceSlug: "diseno-de-locales-comerciales",
     name: "Zhoue",
     location: "Nuevocentro Shopping",
     category: "Retail Indumentaria",
@@ -146,6 +169,8 @@ export const projects: Project[] = [
   },
   {
     slug: "rustico-urca",
+    seoTitle: "Legajo técnico y renders del espacio Rústico en Urca, Córdoba",
+    serviceSlug: "legajo-tecnico-y-renders-3d",
     name: "Rústico",
     location: "Urca, Córdoba",
     category: "Comercial / Gastronómico",

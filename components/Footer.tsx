@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { services } from "@/data/services";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -17,7 +18,7 @@ export default function Footer() {
   return (
     <footer className="bg-noche border-t border-crudo/10 pt-16 pb-8">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-8 mb-16">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="inline-flex flex-col gap-2 mb-6" aria-label="GD Estudio — Inicio">
               <span className="text-3xl leading-none font-medium tracking-wide text-crudo">GD</span>
@@ -35,6 +36,19 @@ export default function Footer() {
               <li><Link href="/#portfolio" className="text-arena-suave hover:text-crudo transition-colors text-sm font-light">Portfolio</Link></li>
               <li><Link href="/#services" className="text-arena-suave hover:text-crudo transition-colors text-sm font-light">Servicios</Link></li>
               <li><Link href="/#about" className="text-arena-suave hover:text-crudo transition-colors text-sm font-light">Sobre Mí</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xs font-normal uppercase tracking-[0.3em] text-arena mb-5">Servicios</h3>
+            <ul className="space-y-3 flex flex-col">
+              {services.map((service) => (
+                <li key={service.slug}>
+                  <Link href={`/servicios/${service.slug}`} className="text-arena-suave hover:text-crudo transition-colors text-sm font-light">
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -61,7 +75,9 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5 text-arena-suave text-sm font-light mt-2">
                 <MapPinIcon className="w-4 h-4 shrink-0" />
-                Córdoba, Argentina
+                <a href="https://maps.google.com/?cid=10798425173062470862" target="_blank" rel="noopener noreferrer" className="hover:text-crudo transition-colors">
+                  Córdoba, Argentina
+                </a>
               </li>
             </ul>
           </div>
