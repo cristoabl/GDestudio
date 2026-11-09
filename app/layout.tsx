@@ -77,8 +77,10 @@ const architecturalOfficeSchema = {
     "opens": "09:00",
     "closes": "18:00"
   },
+  "hasMap": "https://maps.google.com/?cid=10798425173062470862",
   "sameAs": [
-    "https://www.instagram.com/gdestudio.arq"
+    "https://www.instagram.com/gdestudio.arq",
+    "https://maps.google.com/?cid=10798425173062470862"
   ],
   "knowsAbout": [
     "Arquitectura Comercial",
@@ -95,45 +97,6 @@ const architecturalOfficeSchema = {
   }
 };
 
-const faqPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Qué es la arquitectura comercial y por qué es clave para un negocio?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La arquitectura comercial fusiona el diseño de espacios físicos con el marketing, branding y psicología de consumo. Un local comercial bien diseñado no solo atrae clientes visualmente, sino que optimiza los flujos de recorrido y la distribución del mobiliario, impulsando la decisión de compra e incrementando las ventas."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué abarca el servicio de diseño de locales comerciales en Córdoba?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ofrecemos un servicio llave en mano que abarca desde la conceptualización de marca, zonificación de áreas, diseño interior y mobiliario a medida, hasta visualización en 3D (renders fotorrealistas), desarrollo de legajo técnico de obra, iluminación estratégica y el acompañamiento de la obra hasta la apertura."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué es el diseño comercial y en qué se diferencia de la arquitectura tradicional?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A diferencia de la arquitectura residencial, el diseño comercial se enfoca en el retorno de la inversión y la interacción de la marca con el cliente. Cada elemento (iluminación, materialidad, fachadas, recorridos) está pensado para comunicar la identidad del negocio y maximizar la rentabilidad del metro cuadrado."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo es el proceso de desarrollo de un proyecto comercial?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Comenzamos con un relevamiento de necesidades y análisis de marca. Luego desarrollamos el anteproyecto conceptual en 3D para definir el look & feel. Tras la aprobación, elaboramos el legajo técnico ejecutivo con todos los planos detallados (electricidad, iluminación, carpintería, sanitarios) listos para presupuestar y construir sin desvíos."
-      }
-    }
-  ]
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -145,10 +108,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(architecturalOfficeSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
         />
       </head>
       <body

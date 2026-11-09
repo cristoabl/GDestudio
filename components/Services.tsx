@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import {
   BuildingStorefrontIcon,
@@ -13,21 +14,25 @@ const services = [
     title: "Diseño Comercial y Retail",
     description: "Creación de experiencias de marca en espacios físicos. Locales, stands y showrooms que potencian las ventas y fidelizan clientes.",
     icon: BuildingStorefrontIcon,
+    href: "/servicios/diseno-de-locales-comerciales",
   },
   {
     title: "Remodelaciones y Refacciones",
     description: "Transformación integral de espacios existentes. Optimizamos distribuciones y renovamos la imagen respetando la identidad.",
     icon: WrenchScrewdriverIcon,
+    href: "/servicios/remodelacion-de-locales-comerciales",
   },
   {
     title: "Visualización 3D (Renders)",
     description: "Imágenes fotorrealistas de alta calidad para previsualizar proyectos, vender ideas o presentaciones comerciales.",
     icon: CubeTransparentIcon,
+    href: "/servicios/legajo-tecnico-y-renders-3d",
   },
   {
     title: "Desarrollo de Legajos Técnicos",
     description: "Documentación exhaustiva para licitaciones y construcción. Planos de detalle, instalaciones, iluminación corporativa.",
     icon: DocumentTextIcon,
+    href: "/servicios/legajo-tecnico-y-renders-3d",
   },
 ];
 
@@ -87,9 +92,15 @@ export default function Services() {
               <h4 className="text-2xl font-medium text-tierra mb-4">
                 {service.title}
               </h4>
-              <p className="text-texto-suave leading-relaxed font-light">
+              <p className="text-texto-suave leading-relaxed font-light mb-6">
                 {service.description}
               </p>
+              <Link
+                href={service.href}
+                className="text-xs uppercase tracking-[0.25em] text-bronce hover:text-tierra transition-colors"
+              >
+                Ver servicio →
+              </Link>
             </motion.div>
           ))}
         </motion.div>
