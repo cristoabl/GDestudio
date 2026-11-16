@@ -20,9 +20,11 @@ export type Project = {
    * Fill only with facts confirmed by the studio.
    */
   details?: string[];
+  /** Hidden projects keep their data but are left out of the site, sitemap and service pages. */
+  hidden?: boolean;
 };
 
-export const projects: Project[] = [
+const allProjects: Project[] = [
   {
     slug: "alma-paz",
     seoTitle: "Diseño del local Alma Paz en Urca, Córdoba",
@@ -127,6 +129,7 @@ export const projects: Project[] = [
   },
   {
     slug: "peusso",
+    hidden: true,
     seoTitle: "Diseño del showroom Peusso en Córdoba",
     serviceSlug: "diseno-de-locales-comerciales",
     name: "Peusso",
@@ -194,3 +197,5 @@ export const projects: Project[] = [
     services: ["Legajo técnico ejecutivo", "Visualización 3D"]
   }
 ];
+
+export const projects: Project[] = allProjects.filter((project) => !project.hidden);

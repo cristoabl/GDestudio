@@ -58,7 +58,7 @@ export const services: Service[] = [
           "Sí. En el anteproyecto desarrollamos renders fotorrealistas para definir el look & feel, así ves tu local terminado antes de invertir en la obra.",
       },
     ],
-    projectSlugs: ["la-dolfina", "zhoue", "arka", "peusso", "alma-paz", "crocco"],
+    projectSlugs: ["la-dolfina", "zhoue", "arka", "alma-paz", "crocco"],
   },
   {
     slug: "remodelacion-de-locales-comerciales",

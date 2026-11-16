@@ -12,7 +12,6 @@ import CountUp from "./CountUp";
 // Bacar abre el carrusel: es el render más oscuro y da mejor contraste al titular.
 const heroImages = [
   { src: "/hero/bacar.webp", alt: "Taller Bacar — diseño industrial contemporáneo" },
-  { src: "/hero/peusso.webp", alt: "Peusso — showroom de iluminación y tecnología" },
   { src: "/hero/alma-paz.webp", alt: "Alma Paz — local comercial en Urca, Córdoba" },
   { src: "/hero/la-dolfina.webp", alt: "La Dolfina — retail de alta gama en Córdoba Shopping" },
   { src: "/hero/crocco.webp", alt: "Crocco — espacio comercial en Valle Escondido" },
@@ -112,7 +111,7 @@ export default function Hero() {
             </div>
             <p className="text-[11px] md:text-sm text-arena-suave font-light tracking-wide px-4 text-balance leading-relaxed">
               Marcas que confiaron:{" "}
-              <span className="text-arena">Rústico · La Dolfina · Arka · Zhoue · Peusso · Crocco</span>
+              <span className="text-arena">Rústico · La Dolfina · Arka · Zhoue · Crocco</span>
             </p>
           </motion.div>
         </motion.div>
