@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { services } from "@/data/services";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -62,7 +63,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/5493512139252" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-arena-suave hover:text-crudo transition-colors text-sm font-light">
+                <a href={whatsappUrl("Hola, quiero consultar por un proyecto comercial.")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-arena-suave hover:text-crudo transition-colors text-sm font-light">
                   <PhoneIcon className="w-4 h-4 shrink-0" />
                   +54 9 351 213-9252
                 </a>

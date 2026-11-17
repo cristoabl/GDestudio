@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import { trackEvent } from "@/lib/analytics";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -24,6 +26,7 @@ export default function Contact() {
 
       const data = await response.json();
       if (data.success) {
+        trackEvent("generate_lead", { method: "form" });
         setStatus("success");
         form.reset();
       } else {
@@ -75,7 +78,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://wa.me/5493512139252"
+                  href={whatsappUrl("Hola, quiero contarte sobre mi proyecto comercial.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 p-4 border border-crudo/15 hover:border-arena/50 transition-all"

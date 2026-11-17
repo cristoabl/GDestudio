@@ -56,4 +56,21 @@
     background-color: rgba(242, 237, 228, 0.9);
     @apply backdrop-blur-md border-b border-linea;
   }
+  /* Entrada del hero en CSS puro: el titular y los CTA no dependen de JavaScript para verse */
+  .hero-rise {
+    animation: hero-rise 0.8s ease-out both;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise {
+    animation: none;
+  }
 }

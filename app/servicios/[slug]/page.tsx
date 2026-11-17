@@ -9,6 +9,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { services } from "@/data/services";
 import { projects } from "@/data/projects";
 import { faqPageSchema } from "@/data/faqs";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 type Params = Promise<{ slug: string }>;
 
@@ -121,7 +122,7 @@ export default async function ServicePage({ params }: { params: Params }) {
                 Contanos tu proyecto
               </Link>
               <a
-                href="https://wa.me/5493512139252"
+                href={whatsappUrl(`Hola, quiero consultar por el servicio de ${service.name}.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-10 py-4 border border-crudo/40 text-crudo font-normal text-xs uppercase tracking-[0.25em] hover:border-crudo hover:bg-crudo/10 transition-all text-center"

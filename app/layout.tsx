@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import Script from "next/script";
+import ConversionTracking from "@/components/ConversionTracking";
 import "./globals.css";
 
 // Única familia tipográfica de la marca: Jost (300 cuerpo, 400 subtítulos, 500 titulares).
@@ -114,6 +115,7 @@ export default function RootLayout({
         className="antialiased bg-marfil text-texto min-h-screen flex flex-col"
       >
         {children}
+        <ConversionTracking />
         <Script
           id="cloudflare-web-analytics"
           type="module"

@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import HeroCanvas from "./HeroCanvas";
 import CountUp from "./CountUp";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 // Mejores renders, uno por proyecto. `src` son versiones livianas (1600px)
 // generadas en /public/hero exclusivamente para el canvas WebGL.
@@ -53,12 +54,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="container mx-auto px-6 md:px-12 relative z-20 flex flex-col items-center text-center mt-28 mb-16 md:my-0 md:mt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-5xl"
-        >
+        <div className="hero-rise max-w-5xl">
           <span className="block text-xs md:text-sm font-light uppercase tracking-[0.5em] text-arena mb-8">
             Arquitectura &amp; Diseño
           </span>
@@ -74,27 +70,24 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="#portfolio"
+            <a
+              href={whatsappUrl("Hola, quiero consultar por el diseño de mi local comercial.")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-10 py-4 bg-crudo text-noche font-normal text-sm uppercase tracking-[0.25em] hover:bg-arena transition-colors w-full sm:w-auto"
             >
-              Ver proyectos
-            </Link>
+              Consultar por mi local
+            </a>
             <Link
-              href="#contact"
+              href="#portfolio"
               className="px-10 py-4 bg-transparent border border-crudo/40 text-crudo font-normal text-sm uppercase tracking-[0.25em] hover:border-crudo hover:bg-crudo/10 transition-all w-full sm:w-auto"
             >
-              Contactar
+              Ver proyectos
             </Link>
           </div>
 
           {/* Indicadores de credibilidad */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-            className="mt-12 flex flex-col items-center gap-6"
-          >
+          <div className="hero-rise [animation-delay:0.4s] mt-12 flex flex-col items-center gap-6">
             <div className="flex items-center justify-center divide-x divide-crudo/20">
               <div className="px-6 text-center">
                 <CountUp value={10} prefix="+" className="block text-2xl md:text-3xl font-medium text-crudo" />
@@ -113,8 +106,8 @@ export default function Hero() {
               Marcas que confiaron:{" "}
               <span className="text-arena">Rústico · La Dolfina · Arka · Zhoue · Crocco</span>
             </p>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
 
       {/* Indicadores del carrusel */}
